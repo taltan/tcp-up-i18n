@@ -1,0 +1,11 @@
+{ 
+  "lang_code": "fr",
+  "page_title": "Assistant de choix - TCP/UP",
+  "back_link_text": "← Retour à la page précédente",
+  "main_heading": "Trouvez votre label en 30 secondes",
+  "main_subtitle": "Répondez à quelques questions simples pour identifier le label TCP/UP qui correspond à votre processus de création",
+  "result_download_label": "<i class=\"fa-solid fa-download\"></i> Télécharger ce badge",
+  "result_detail_label": "En savoir plus sur ce label",
+  "result_restart_label": "<i class=\"fa-solid fa-rotate-left\"></i> Recommencer",
+  "back_to_top_aria_label": "Remonter en haut"
+}
