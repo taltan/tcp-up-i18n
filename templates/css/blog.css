@@ -1,0 +1,361 @@
+
+/* ==========================================================================
+   BLOG TCP/UP – Styles spécifiques
+   ========================================================================== */
+
+/* Hero personnalisé pour le blog */
+.blog-hero {
+    height: 100vh; /* Un peu moins haut que la home */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), 
+                url('https://cdn.jsdelivr.net/gh/taltan/tcp-up-assets/blog/hero-bg-blog.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+.blog-hero h1 {
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;    
+}
+.blog-hero .subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    max-width: 800px;
+    margin-bottom: 2.5rem;
+    color: var(--text-light-grey);
+}
+
+/* Conteneur principal du blog */
+.blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Grille des posts */
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Carte d'article */
+.post-card {
+    background: var(--bg-card-dark);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--squircle-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    height: 100%;
+}
+.post-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.3);
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+/* Image de la carte */
+.card-img {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: var(--deep-slate);
+}
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.post-card:hover .card-img img {
+    transform: scale(1.05);
+}
+
+/* Catégorie (badge) */
+.category {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--accent-blue);
+    color: var(--midnight-blue);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 2; /* était 10, désormais sous le lien */
+}
+
+/* Corps de la carte */
+.card-body {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.post-date {
+    font-size: 0.8rem;
+    color: var(--slate-blue);
+    margin-bottom: 0.5rem;
+}
+.card-body h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    color: var(--text-light);
+}
+.card-body p {
+    font-size: 0.9rem;
+    color: var(--text-light-grey);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+/* Lien étendu pour rendre toute la carte cliquable */
+.stretched-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    cursor: pointer;
+    text-decoration: none;
+    color: transparent;
+    display: block;
+    /* Supprime tout padding/marge hérité de .btn */
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+}
+/* On garde le bouton possible mais sans événements de clic car stretched-link prend le dessus */
+.btn.stretched-link {
+    pointer-events: auto; /* le lien couvre tout */
+}
+
+/* Pour que le bouton ne gêne pas, on peut aussi laisser le lien invisible */
+.stretched-link {
+    text-decoration: none;
+    color: transparent;
+}
+.stretched-link:hover {
+    background: transparent;
+}
+
+/* Optionnel : un petit effet de flèche */
+.post-card .card-body .btn {
+    margin-top: auto;
+    align-self: flex-start;
+    pointer-events: none; /* pour que le lien étendu prenne le clic */
+}
+
+/* ==========================================================================
+   PAGE ARTICLE – Conteneur plein texte (.post-full)
+   ========================================================================== */
+.post-full {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.post-full h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: var(--white);
+}
+
+.post-full .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--slate-blue);
+}
+
+.post-full .post-meta .post-date {
+    font-weight: 500;
+}
+
+.post-full .post-meta .category {
+    /* On reprend le style de la carte */
+    background: var(--accent-blue);
+    color: var(--midnight-blue);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0.8rem;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.post-full .featured-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--squircle-radius);
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    object-fit: cover;
+}
+
+.post-full .post-content h2 {
+    text-align: left;
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+	border-left: 4px solid var(--accent-blue);  
+	padding-left: 1rem;  
+}
+
+.post-full .post-content h3 {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--white);
+}
+
+.post-full .post-content p {
+    margin-bottom: 1rem;
+}
+
+/*
+.post-full .post-content a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(56,189,248,0.3);
+    transition: border-color 0.2s;
+}
+*/
+.post-full .post-content a:hover {
+    border-color: var(--accent-blue);
+}
+
+.post-full .post-content img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.post-full .post-content blockquote {
+    border-left: 4px solid var(--accent-blue);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--text-light-grey);
+}
+
+.post-full .post-content code {
+    background: var(--bg-card-dark);
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+}
+
+.post-full .post-content pre {
+    background: var(--bg-card-dark);
+    padding: 1.5rem;
+    border-radius: var(--squircle-radius);
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+/* Conteneur des labels sous la date */
+.post-label {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;           /* passe en colonne sur écran étroit */
+    align-items: flex-start;
+}
+
+/* Partager en bas d'article */
+.post-share {
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--slate-blue);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.5rem;
+}
+.post-share .share-label {
+    margin-right: 1rem;
+    vertical-align: middle;
+    opacity: 0.8;
+}
+.post-share a {
+    color: var(--slate-blue);
+    font-size: 1.25rem;
+    margin: 0 0.5rem;
+    transition: color 0.2s;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.post-share a:hover {
+    color: var(--accent-blue);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .post-full {
+        padding: 40px 15px;
+    }
+    .post-full h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Décalage des paragraphes sous les h2 sur grand écran (≥ 769px) */
+@media (min-width: 769px) {
+    .post-full .post-content h2 ~ p {
+        margin-left: 20px;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 768px) {
+    .blog-hero {
+        height: 60vh;
+        padding: 0 5%;
+    }
+    .blog-container {
+        padding: 40px 15px;
+    }
+    .post-grid {
+        grid-template-columns: 1fr; /* une seule colonne */
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-hero h1 {
+        font-size: 2rem;
+    }
+}

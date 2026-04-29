@@ -1,0 +1,443 @@
+/* ==========================================================================
+   TCP/UP - STYLE SPÉCIFIQUE À LA PAGE DOCUMENTATION
+   ========================================================================== */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--midnight-blue) !important;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+/* Conteneur principal de la documentation */
+.documentation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px;
+}
+
+/* En-tête de la documentation */
+.doc-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.doc-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.doc-version {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.doc-layout {
+    display: block; /* On n'a plus besoin du flex à deux colonnes */
+    width: 100%;
+}
+
+/* Sidebar fixe */
+.sidebar-toc {
+    width: 260px;
+    position: sticky;
+    top: 110px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    padding-right: 20px;
+    z-index: 10;
+}
+
+
+.doc-content-wrapper {
+    width: 100%;
+    max-width: 1200px; /* Largeur idéale pour la lecture */
+    margin: 0 auto;    /* Centre le texte proprement */
+}
+
+/* On force l'empilement vertical propre */
+#toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#toc li {
+    display: block;
+    width: 100%;
+}
+
+/* Style des liens principaux */
+/* Style des liens (S'applique aux liens principaux ET sous-menus) */
+/* Style des liens principaux */
+.toc-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    display: block;
+    border-radius: 6px;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+    line-height: 1.4;
+}
+
+.toc-link:hover, .toc-link.active {
+    opacity: 1;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+}
+
+
+/* Style des sous-menus (3.1, 3.2, etc.) */
+.sub-toc {
+    margin: 4px 0 8px 15px !important;
+    padding-left: 10px !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.sub-toc a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.sub-toc .toc-link {
+    font-size: 0.85rem;
+    padding: 4px 10px;
+}
+
+/* --- Niveau 3 : Sous-menus pour les H4 --- */
+.sub-sub-toc {
+    margin: 2px 0 6px 15px !important; /* On décale encore un peu vers la droite */
+    padding-left: 10px !important;
+    border-left: 1px dashed rgba(255, 255, 255, 0.15); /* Bordure pointillée pour différencier du H3 */
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sub-sub-toc .toc-link {
+    font-size: 0.8rem; /* Police légèrement plus petite */
+    padding: 3px 10px;
+    opacity: 0.55; /* Plus discret par défaut */
+}
+
+.sub-sub-toc .toc-link:hover, 
+.sub-sub-toc .toc-link.active {
+    opacity: 1;
+    color: var(--accent-blue);
+    background: transparent; /* Pas de fond pour éviter de surcharger visuellement */
+}
+
+/* --- RESPONSIVE --- */
+/* Cacher la sidebar sur mobile */
+@media (max-width: 768px) {
+    .sidebar-toc {
+        display: none;
+    }
+    .doc-layout {
+        display: block;
+    }
+}
+
+/* Le bouton flottant repositionné en haut à gauche */
+.flyout-btn {
+    position: fixed;
+    top: 183px; /* Aligné sous ton header */
+    left: 20px;
+    background: var(--accent-blue);
+    color: var(--midnight-blue);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px; /* Un peu plus carré pour un look "bouton menu" */
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.flyout-btn:hover {
+    background: #ffffff; /* Change de couleur au survol */
+    transform: translateX(5px); /* Petit décalage vers la droite au survol */
+}
+
+
+/* On change aussi l'animation du panneau pour qu'il vienne de la gauche */
+.flyout-panel {
+    position: fixed;
+    top: 0;
+    left: -350px; /* Caché à gauche maintenant */
+    width: 320px;
+    height: 100%;
+    background: var(--midnight-blue);
+    border-right: 1px solid rgba(255, 255, 255, 0.1); /* Bordure à droite */
+    z-index: 1001;
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.flyout-panel.active {
+    left: 0; /* Apparaît depuis la gauche */
+    right: auto;
+}
+/* Header du menu */
+.flyout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Overlay sombre */
+.flyout-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    display: none;
+}
+
+.flyout-overlay.active {
+    display: block;
+}
+
+/* Ajustement pour le contenu */
+.flyout-content {
+    overflow-y: auto;
+}
+
+/* Sections */
+.doc-section {
+    margin-bottom: 1rem;
+    scroll-margin-top: 10px;
+    
+}
+
+.content-section {
+	margin-left: 20px;
+}
+
+.content-section p {
+    margin-bottom: 0.7rem; /* Ajustez la valeur selon l'espacement voulu */
+}
+
+/* Optionnel : Supprime l'espace pour le tout dernier paragraphe de la section */
+.content-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Réduction du padding vertical pour les sections de la page documentation */
+.documentation-container section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.doc-section h2 {
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--accent-blue);
+    padding-left: 1rem;
+}
+
+.doc-section h3 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1rem;
+    color: var(--accent-blue);
+}
+
+/* Arbre de décision */
+.decision-tree {
+    background: var(--bg-card-light);
+    border-radius: var(--squircle-radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+
+    
+/* Alignement de la liste avec les badges */
+
+
+.ul-list-d {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem 1.5rem;
+}
+.ul-list-d li {
+    display: flex;
+    align-items: center; /* Centrage vertical de tous les enfants */
+    flex-wrap: wrap;    /* Permet le retour à la ligne sur mobile si besoin */
+    gap: 8px;           /* Espace uniforme entre l'icône, le texte et le badge */
+    line-height: 1.2;   /* Ajuste la hauteur de ligne pour éviter les décalages */
+    margin-bottom: 10px;
+}
+.ul-list-d li i {
+    color: var(--accent-blue);
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+.ul-list-d li strong {
+    color: var(--accent-blue);
+}
+
+section#arbitrage.doc-section .ul-list li strong {
+    color: var(--text-light) !important;
+}
+
+.decision-question {
+    font-weight: 600;
+    color: var(--accent-blue);
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    border-left: 3px solid var(--slate-blue);
+}
+
+.decision-arrow {
+    color: var(--accent-blue);
+    margin-right: 0.5rem;
+}
+
+/* Tableau des labels */
+.label-table-wrapper {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.label-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card-light);
+    border-radius: var(--squircle-radius);
+    overflow: hidden;
+}
+
+.label-table th,
+.label-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: top;
+}
+
+.label-table th {
+    background: rgba(56, 189, 248, 0.1);
+    font-weight: 600;
+    color: var(--accent-blue);
+}
+
+.label-table tr:last-child td {
+    border-bottom: none;
+}
+
+.label-table code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.2rem 0.4rem;
+    border-radius: var(--squircle-radius);
+    font-size: 0.85rem;
+}
+
+/* Exemples en grille */
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.example-card {
+    background: var(--bg-card-light);
+    border-radius: var(--squircle-radius);
+    padding: 1.2rem;
+    border-left: 3px solid var(--accent-blue);
+}
+
+.example-card strong {
+    color: var(--accent-blue);
+}
+
+/* Bloc code */
+.code-block {
+    background: #0a0e1a;
+    border-radius: 12px;
+}
+
+.code-block pre {
+    margin: 0;
+    background: transparent !important;
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+}
+
+
+/* Badge simulation */
+.badge-demo {
+    display: inline-block;
+    background: var(--slate-blue);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--squircle-radius);
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .documentation-container {
+        padding-top: 100px;
+    }
+    .doc-header h1 {
+        font-size: 2rem;
+    }
+
+    .content-section {
+        margin-left: 0px;
+    }
+
+    .doc-section h2 {
+        font-size: 1.5rem;
+    }
+    .label-table th,
+    .label-table td {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+    .ul-list-d {
+        margin-left: 0.5rem;     /* Réduit fortement le retrait gauche */
+        padding-left: 0;
+    }
+    .ul-list-d li {
+        gap: 8px;                /* Réduit légèrement l'espace entre l'icône et le texte */
+    }
+    .ul-list-d li i {
+        margin-right: 2px;       /* Ajuste finement la position de l'icône */
+        font-size: 0.75rem;      /* Optionnel : réduit légèrement la taille de la puce */
+    }    
+    
+}

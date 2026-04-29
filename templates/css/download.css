@@ -1,0 +1,562 @@
+/* ==========================================================================
+   TCP/UP – PAGE TÉLÉCHARGEMENT BADGES (download.css) – VERSION COMPLÈTE
+   ========================================================================== */
+
+/* En-tête de la page */
+.download-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.download-header p {
+    color: var(--slate-blue);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Sections par catégorie (ancienne version, conservée pour compatibilité) */
+.category-section {
+    margin-bottom: 4rem;
+}
+
+.category-title {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--accent-blue);
+    padding-left: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+/* Grille des cartes (Desktop) - ancienne version */
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+/* Carte de téléchargement individuelle - ancienne version */
+.download-card {
+    background: var(--bg-card-dark);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--squircle-radius);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+    min-width: 0; 
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Zone visuelle (Badge + Boutons DL) - ancienne version */
+.download-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 25px 15px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+}
+
+.download-visual.light-bg {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Lien d'aperçu SVG */
+.badge-link {
+    display: block;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+    outline: none;
+}
+
+.badge-link:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 8px 15px rgba(56, 189, 248, 0.25));
+}
+
+/* Liens SVG/WEBP */
+.download-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-dl {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-light);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.btn-dl:hover {
+    background: var(--accent-blue);
+    color: var(--midnight-blue);
+    border-color: var(--accent-blue);
+}
+
+/* ==========================================================================
+   ZONES DE CODE HTML AUTONOME (ancienne version)
+   ========================================================================== */
+
+.codes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+}
+
+.download-code {
+    display: flex;
+    flex-direction: column;
+    background: #000000;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    min-width: 0;
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.code-label {
+    font-size: 0.7rem;
+    color: var(--slate-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.code-label .text-accent {
+    color: var(--accent-blue);
+}
+
+/* Bouton Copier */
+.copy-btn {
+    background: var(--deep-slate);
+    border: none;
+    color: var(--text-light);
+    padding: 4px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.copy-btn:hover {
+    background: var(--accent-blue);
+    color: var(--midnight-blue);
+}
+
+.copy-btn.copied {
+    background: var(--color-huc);
+    color: var(--midnight-blue);
+}
+
+/* Le texte du code */
+.code-block {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.7rem;
+    color: #7dd3fc;
+    padding-bottom: 8px;
+    white-space: nowrap; 
+    overflow-x: auto;
+    word-break: normal;
+    scrollbar-width: thin;
+    scrollbar-color: var(--slate-blue) transparent;
+}
+
+.code-block::-webkit-scrollbar { height: 6px; }
+.code-block::-webkit-scrollbar-thumb { background: var(--slate-blue); border-radius: 4px; }
+.code-block::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 4px;}
+
+/* ==========================================================================
+   NOUVEAUX STYLES POUR LA PAGE REFONDUE (SÉLECTEUR + RESSOURCES)
+   ========================================================================== */
+
+/* Conteneur du sélecteur de style */
+.style-selector-container {
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    background: var(--bg-card-dark);
+    padding: 0 1.5rem;
+    border-radius: var(--squircle-radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.style-selector-container label {
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/*
+.style-selector {
+    background: var(--bg-card-dark);
+    color: var(--text-light);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    min-width: 260px;
+    transition: border-color 0.2s;
+}
+*/
+
+.style-selector {
+    background: var(--midnight-blue);
+    color: var(--text-light);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;    
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    min-width: 260px;
+}
+
+.style-selector:hover {
+    border-color: var(--accent-blue);
+}
+
+.style-selector:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+/* Aperçu du style sélectionné */
+.style-preview {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem 1.5rem;
+/*
+    background: rgba(0, 0, 0, 0.2);
+*/
+    border-radius: 8px;
+    min-height: 70px;
+}
+
+/* Grille des ressources (affichage vertical des labels) */
+.resource-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Carte pour un label */
+.label-resource-card {
+    background: var(--bg-card-dark);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--squircle-radius);
+    padding: 1.8rem;
+    transition: box-shadow 0.3s;
+}
+
+.label-resource-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* En-tête de la carte label – avec badge à droite, boutons au centre */
+.label-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.8rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.label-title-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 0 1 auto;
+}
+
+.label-color-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px currentColor;
+}
+
+.label-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.label-download-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex: 0 0 auto;
+}
+
+.label-badge-preview {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* Conteneur des rangées de ressources */
+.resource-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.resource-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/* Bloc de ressource individuel */
+.resource-item {
+    background: #0a0f1a;
+    border-radius: 10px;
+    padding: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.resource-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--slate-blue);
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.resource-item  {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.65rem;
+}
+
+.resource-item .code-block {
+    background: #000000;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    font-size: 0.65rem;
+    max-height: 120px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/* Boutons de téléchargement (dans l'en-tête) */
+.btn-icon {
+    background: var(--deep-slate);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-icon:hover {
+    background: var(--accent-blue);
+    color: var(--midnight-blue);
+    border-color: var(--accent-blue);
+}
+
+.btn-icon i {
+    font-size: 0.9rem;
+}
+
+/* Variantes showcase (section des 7 variantes) */
+.variant-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem 2rem;
+    margin-top: 2rem;
+}
+
+.variant-item {
+    flex: 0 0 auto;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.variant-item img {
+    height: 37px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    margin: 0 auto;
+}
+
+.variant-label {
+    font-size: 0.75rem;
+    color: var(--slate-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    line-height: 1.3;
+    word-break: keep-all;
+}
+
+/* ==========================================================================
+   RESPONSIVE (Tablettes & Mobiles)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .variant-showcase {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Anciennes règles */
+    .download-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+    
+    .download-card {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .download-visual {
+        padding: 15px 10px;
+    }
+
+    .download-links {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .btn-dl {
+        width: 100%;
+    }
+
+    .code-block {
+        font-size: 0.65rem;
+    }
+
+    /* Nouvelles règles responsives */
+    .style-selector-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .style-selector {
+        width: 100%;
+    }
+
+    .style-preview {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .resource-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .label-resource-card {
+        padding: 1.2rem;
+    }
+
+    .label-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .label-download-buttons {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .label-badge-preview {
+        order: 2;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .variant-item {
+        width: 100px;
+    }
+
+    .variant-item img {
+        height: 32px;
+    }
+
+    .variant-label {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .resource-item .code-block {
+        font-size: 0.6rem;
+    }
+}

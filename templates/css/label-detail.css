@@ -1,0 +1,255 @@
+/* ==========================================================================
+   TCP/UP - PAGES DE DÉTAIL DES LABELS
+   Structure : conteneur, fiche (grille), sidebar, contenu principal,
+   éléments spécifiques (signature, prompt, philosophie), responsive.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CONTENEUR PRINCIPAL & LIEN DE RETOUR
+   -------------------------------------------------------------------------- */
+  
+.label-detail-container {
+    padding: 120px 5% 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* --------------------------------------------------------------------------
+   FICHE LABEL (GRILLE 2 COLONNES)
+   -------------------------------------------------------------------------- */
+.label-sheet {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   SIDEBAR (VISUELS ET MÉTADONNÉES TECHNIQUES)
+   -------------------------------------------------------------------------- */
+.label-sidebar {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px 20px 40px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    min-width: 0; /* CRUCIAL : permet aux enfants de rétrécir */
+}
+
+.label-visual-group {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.detail-top-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: auto;
+}
+
+.detail-badge-box {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.detail-percent-tag {
+    background: var(--slate-blue);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Métadonnées techniques (signatures) */
+.technical-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.meta-item {
+    /* pas de style supplémentaire nécessaire */
+}
+
+.meta-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.signature-box {
+    background: #000;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    white-space: pre-wrap;
+    color: #10b981; /* vert type terminal */
+}
+/* Style pour le bloc d'appel au téléchargement dans la sidebar */
+.download-cta {
+    background: rgba(56, 189, 248, 0.05); /* Légère teinte accent-blue */
+    border: 1px dashed rgba(56, 189, 248, 0.2);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.download-cta .small-text {
+    font-size: 0.75rem;
+    color: var(--slate-blue);
+    line-height: 1.4;
+}
+
+.btn-sidebar-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--accent-blue);
+    color: var(--midnight-blue) !important; /* Force la couleur sombre pour lisibilité */
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-sidebar-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+    background: #ffffff; /* Devient blanc au survol pour le contraste */
+}
+
+.btn-sidebar-download i {
+    font-size: 1rem;
+}
+/* --------------------------------------------------------------------------
+   CONTENU PRINCIPAL (DESCRIPTIFS)
+   -------------------------------------------------------------------------- */
+.label-content {
+    padding: 37px 40px 40px 40px;
+}
+
+/* Grand logo central (facultatif) */
+.label-main-visual-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3rem;
+    padding: 0;
+}
+
+.detail-main-logo {
+    height: auto;
+    display: block;
+    width: 100%;
+    /* La largeur réelle est gérée par l'image elle-même */
+}
+
+/* Sections descriptives */
+.spec-section {
+    margin-bottom: 40px;
+}
+
+.spec-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.spec-list {
+    list-style: none;
+}
+
+.spec-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.spec-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+}
+
+/* Boîtes pour les exemples de prompt */
+.prompt-box {
+    background: var(--midnight-blue);
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid var(--accent-blue);
+    font-style: italic;
+}
+
+/* Style de la philosophie dans le contenu (différent de celui de la page d'accueil) */
+.label-content .label-philosophy {
+    color: var(--text-light);
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--accent-blue);
+    font-size: 1.1rem;
+    padding: 1.5rem;
+}
+
+/* Optionnel : guillemets stylisés (déjà présents dans la charte) */
+.label-content .label-philosophy::before,
+.label-content .label-philosophy::after {
+    color: var(--accent-blue);
+}
+
+/* --------------------------------------------------------------------------
+   GRILLE POUR LES EXEMPLES (si utilisée dans certaines pages)
+   -------------------------------------------------------------------------- */
+.example-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.example-item {
+    margin-bottom: 1rem;
+}
+
+.example-item p {
+    margin-top: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .label-sheet {
+        grid-template-columns: 1fr;
+    }
+    .label-sidebar {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* Ajustements pour très petits écrans (optionnel) */
+@media (max-width: 480px) {
+    .label-detail-container {
+        padding: 100px 5% 40px;
+    }
+    .label-sidebar,
+    .label-content {
+        padding: 20px;
+    }
+    .detail-main-logo {
+        max-width: 80%;
+    }
+}

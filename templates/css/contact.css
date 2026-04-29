@@ -1,0 +1,273 @@
+/* --------------------------------------------------------------------------
+   PAGE CONTACT - DESIGN MODERNE & ÉLÉGANT
+   -------------------------------------------------------------------------- */
+
+.contact-page {
+    padding-top: 120px; /* Espace pour le header fixe */
+    min-height: 100vh;
+    color: var(--text-light);
+}
+
+.contact-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 80px;
+
+}
+
+.contact-intro {
+    text-align: center;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* --- COLONNE INFOS (GAUCHE) --- */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    background: var(--bg-card-dark);
+    border-radius: var(--squircle-radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--accent-blue);
+
+}
+
+.info-icon {
+    font-size: 1.4rem;
+    background: rgba(56, 189, 248, 0.1);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: var(--accent-blue);
+}
+
+.info-content h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-blue);
+    margin: 0 0 4px 0;
+}
+
+.info-content p {
+    margin: 0;
+    font-weight: 500;
+    color: var(--white);
+}
+
+/* On passe en colonne pour empiler la ligne du haut et le texte du bas */
+.info-item.privacy-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligne tout à gauche */
+    gap: 1rem;
+}
+
+/* On crée une sous-ligne pour l'icône et le titre */
+.info-main-row {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+/* Style du texte explicatif en bas */
+.info-footer-text p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin: 0;
+    color: var(--white); /* ou une couleur plus discrète selon votre choix */
+    font-weight: 300; /* Plus léger pour différencier du titre */
+}
+
+/* Bloc de réassurance Label */
+.contact-badge-ad {
+    margin-top: 1rem;
+    padding: 2rem;
+    border-radius: var(--squircle-radius);
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.05), transparent);
+    border: 1px dashed rgba(34, 197, 94, 0.3);
+    text-align: center;
+}
+
+.contact-badge-ad p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.label-status {
+    display: inline-block;
+    color: var(--color-huc);
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    padding: 5px 12px;
+    border: 1px solid var(--color-huc);
+    border-radius: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.social-link:hover {
+    color: var(--accent-blue);
+}
+
+.social-link i {
+    font-size: 1.4rem;
+}
+/* --- COLONNE FORMULAIRE (DROITE) --- */
+.contact-form-container {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: var(--squircle-radius);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    margin-bottom: 1.8rem;
+}
+
+.form-group:focus-within label {
+    color: var(--accent-blue);
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.modern-form input, 
+.modern-form select, 
+.modern-form textarea {
+    width: 100%;
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px 18px;
+    border-radius: 12px;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.modern-form input:focus, 
+.modern-form select:focus, 
+.modern-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    background: rgba(30, 41, 59, 0.7);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+/* Placeholder style */
+::placeholder {
+    color: #475569;
+    opacity: 1;
+}
+
+/* --- BOUTON SUBMIT AVEC EFFET GLOW --- */
+.btn-submit {
+    position: relative;
+    width: 100%;
+    padding: 16px;
+    background: var(--accent-blue);
+    border: none;
+    border-radius: 12px;
+    color: var(--midnight-blue);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-submit:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+}
+
+.btn-submit:active {
+    transform: translateY(-1px);
+}
+
+.btn-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent
+    );
+    transition: 0.6s;
+}
+
+.btn-submit:hover .btn-glow {
+    left: 100%;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .contact-hero {
+        padding-bottom: 40px;
+    }
+
+    .contact-form-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .contact-info {
+        order: 2; /* Les infos passent sous le formulaire sur mobile */
+    }
+}
