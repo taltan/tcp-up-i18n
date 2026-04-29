@@ -1,9 +1,3 @@
-Voici une version revue du **README.md**. J'ai élargi le champ à l'**Internationalisation (i18n)** globale tout en précisant que l'effort actuel se concentre sur l'anglais. 
-
-J'ai également ajusté les instructions pour qu'elles soient valables pour n'importe quelle future langue (espagnol, allemand, etc.), tout en gardant l'anglais comme exemple principal.
-
----
-
 # 🌍 TCP/UP - Internationalisation & Traduction
 
 Bienvenue sur le dépôt dédié à l'internationalisation (i18n) du projet **TCP/UP (Transparent Content Protocol / User-Powered)**. 
