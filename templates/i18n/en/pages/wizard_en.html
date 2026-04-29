@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{lang_code}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <meta name="tcp-up:labels" content="editorial:HCE, code:ACE">
+    <meta name="tcp-up:editorial-content-origin" content="human">
+    <meta name="tcp-up:editorial-form-origin" content="ai-assisted">
+    <meta name="tcp-up:editorial-ai-role" content="assisted-formulation">
+    <meta name="tcp-up:code-content-origin" content="hybrid">
+    <meta name="tcp-up:code-form-origin" content="hybrid">
+    <meta name="tcp-up:code-ai-role" content="co-construction">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../css/utilities.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/documentation.css">
+    <link rel="stylesheet" href="../../../css/wizard.css">
+</head>
+<body>
+
+    <div id="header-target"></div>
+
+    <main class="documentation-container">
+        <a href="javascript:history.back()" class="back-link">{{back_link_text}}</a>
+
+        <div class="doc-header">
+            <h1 id="top">{{main_heading}}</h1>
+            <p class="subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+                {{main_subtitle}}
+            </p>
+        </div>
+
+        <!-- Conteneur du wizard -->
+        <div id="wizard-container" class="wizard-container">
+            <!-- Étape active -->
+            <div id="wizard-step" class="wizard-step"></div>
+            <!-- Barre de progression -->
+            <div id="wizard-progress" class="wizard-progress"></div>
+            <!-- Zone des boutons de choix -->
+            <div id="wizard-choices" class="wizard-choices"></div>
+        </div>
+
+        <!-- Template pour le résultat (affiché à la fin) -->
+        <template id="result-template">
+            <div class="result-screen">
+                <div class="result-header">
+                    <span class="result-badge-label" id="result-badge"></span>
+                    <h2 id="result-title"></h2>
+                </div>
+                <p id="result-description" class="result-description"></p>
+                <div class="result-actions">
+                    <a href="#" id="result-download-link" class="btn btn-primary">{{result_download_label}}</a>
+                    <a href="#" id="result-detail-link" class="btn btn-secondary">{{result_detail_label}}</a>
+                </div>
+                <div class="result-reset">
+                    <button id="restart-wizard" class="btn btn-secondary">{{result_restart_label}}</button>
+                </div>
+            </div>
+        </template>
+    </main>
+
+    <div id="footer-target"></div>
+
+    <script src="../../../js/main.js" defer></script>
+    <script src="../../..//js/wizard.js" defer></script>
+
+    <button id="backToTop" class="back-to-top" aria-label="{{back_to_top_aria_label}}">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>    
+</body>
+</html>

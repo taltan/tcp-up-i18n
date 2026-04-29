@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{lang_code}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <meta name="tcp-up:labels" content="editorial:HCE, code:ACE">
+    <meta name="tcp-up:editorial-content-origin" content="human">
+    <meta name="tcp-up:editorial-form-origin" content="ai-assisted">
+    <meta name="tcp-up:editorial-ai-role" content="assisted-formulation">
+    <meta name="tcp-up:code-content-origin" content="hybrid">
+    <meta name="tcp-up:code-form-origin" content="hybrid">
+    <meta name="tcp-up:code-ai-role" content="co-construction">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../css/utilities.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/documentation.css">
+</head>
+<body>
+
+    <div id="header-target"></div>
+
+    <main class="documentation-container">
+        <a href="javascript:history.back()" class="back-link">{{back_link_text}}</a>
+
+        <div class="doc-header">
+            <h1 id="top">{{main_heading}}</h1>
+            <p class="subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+                {{main_subtitle}}
+            </p>
+        </div>
+
+		<section class="doc-section">
+			<div class="content-section">
+				<h2>{{section_stats_title}}</h2>
+				<p>{{section_stats_text}}</p>
+				<ul class="ul-list">
+					<li>{{stats_li1}}</li>
+					<li>{{stats_li2}}</li>
+					<li>{{stats_li3}}</li>
+				</ul>
+
+				<h2 style="margin-top: 3rem;">{{section_contact_title}}</h2>
+				<ul class="ul-list">
+					<li>{{contact_privacy_li1}}</li>
+					<li>{{contact_privacy_li2}}</li>
+				</ul>
+
+				<h2 style="margin-top: 3rem;">{{section_darkmode_title}}</h2>
+				<p>{{darkmode_text}}</p>
+				<ul class="ul-list">
+					<li>{{darkmode_li1}}</li>
+					<li>{{darkmode_li2}}</li>
+					<li>{{darkmode_li3}}</li>
+				</ul>
+
+				<h2 style="margin-top: 3rem;">{{section_hosting_title}}</h2>
+				<p>{{hosting_text}}</p>
+			</div>
+		</section>
+    </main>
+
+    <div id="footer-target"></div>
+
+    <script src="../../../js/main.js" defer></script>
+    
+    <button id="backToTop" class="back-to-top" aria-label="{{back_to_top_aria_label}}">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>    
+</body>
+</html>

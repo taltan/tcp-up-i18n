@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="{{lang_code}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <meta name="tcp-up:labels" content="editorial:HCE, code:ACE">
+    <meta name="tcp-up:editorial-content-origin" content="human">
+    <meta name="tcp-up:editorial-form-origin" content="ai-assisted">
+    <meta name="tcp-up:editorial-ai-role" content="assisted-formulation">
+    <meta name="tcp-up:code-content-origin" content="hybrid">
+    <meta name="tcp-up:code-form-origin" content="hybrid">
+    <meta name="tcp-up:code-ai-role" content="co-construction">   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../css/utilities.css">  
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/contact.css">
+</head>
+<body>
+
+	<div id="header-target"></div>
+
+    <main class="contact-page">
+        <section class="contact-hero">
+            <div class="container">
+              
+			<a href="javascript:history.back()" class="back-link">{{back_link_text}}</a>
+			<div class="doc-header">
+				<h2>{{contact_hero_title}}</h2>
+				<p class="subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+					{{contact_hero_subtitle}}
+				</p>
+			</div>
+                
+                <div class="contact-wrapper">
+                    
+                    <aside class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="info-content">
+                                <h3>{{contact_info_direct_title}}</h3>
+                                <p>{{contact_info_direct_email}}</p>
+                            </div>
+                        </div>
+                        
+						<div class="info-item">
+							<div class="info-icon"><i class="fa-solid fa-share-nodes"></i></div>
+							<div class="info-content">
+								<h3>{{contact_social_title}}</h3>
+								<div class="social-links">
+
+									<a href="https://www.linkedin.com/company/tcp-up" class="social-link" aria-label="{{contact_social_linkedin_aria_label}}" target="_blank" rel="noopener noreferrer">
+										<i class="fa-brands fa-linkedin"></i>
+										<span>{{contact_social_linkedin_label}}</span>
+									</a>
+
+									<a href="https://bsky.app/profile/tcp-up.org" class="social-link" aria-label="{{contact_social_bluesky_aria_label}}" target="_blank" rel="noopener noreferrer">
+										<i class="fa-brands fa-bluesky"></i>
+										<span>{{contact_social_bluesky_label}}</span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="info-item">
+							<div class="info-icon"><i class="fa-brands fa-github"></i></div>
+							<div class="info-content">
+								<h3>{{contact_contrib_title}}</h3>
+								<p>
+									<a href="https://github.com/taltan/tcp-up" target="_blank" rel="noopener noreferrer" class="a-link">
+										{{contact_contrib_link_text}}
+									</a>
+								</p>
+							</div>
+						</div>
+
+						<div class="info-item privacy-box">
+							<div class="info-main-row">
+								<div class="info-icon"><i class="fa-solid fa-shield-halved"></i></div>
+								<div class="info-content">
+									<h3>{{contact_privacy_title}}</h3>
+									<p>{{contact_privacy_subtitle}}</p>
+								</div>
+							</div>
+							
+							<div class="info-footer-text">
+								<p>{{contact_privacy_text}}</p>
+							</div>
+						</div>
+                                                
+                    </aside>
+
+					<section class="contact-form-container">
+						<form id="contact-form" class="modern-form">
+							
+							<input type="text" name="website" style="display:none !important" tabindex="-1" autocomplete="off">
+
+							<div class="form-group">
+								<label for="name">{{contact_form_label_name}}</label>
+								<input type="text" id="name" name="name" placeholder="{{contact_form_placeholder_name}}" required>
+							</div>
+							
+							<div class="form-group">
+								<label for="email">{{contact_form_label_email}}</label>
+								<input type="email" id="email" name="email" placeholder="{{contact_form_placeholder_email}}" required>
+							</div>
+
+							<div class="form-group">
+								<label for="subject_select">{{contact_form_label_subject}}</label>
+								<select id="subject_select" name="interest"> 
+									<option value="Informations Générales">{{contact_form_option_info_generales}}</option>
+									<option value="Suggestion d'amélioration">{{contact_form_option_suggestion}}</option>
+									<option value="Question sur les labels">{{contact_form_option_question_labels}}</option>
+									<option value="Demande de partenariat">{{contact_form_option_partnership}}</option>
+									<option value="Signalement d'un problème">{{contact_form_option_bug}}</option>
+									<option value="Autre">{{contact_form_option_other}}</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="message">{{contact_form_label_message}}</label>
+								<textarea id="message" name="message" rows="5" placeholder="{{contact_form_placeholder_message}}" required></textarea>
+							</div>
+
+							<button type="submit" class="btn-submit">
+								<span>{{contact_form_submit_label}}</span>
+								<div class="btn-glow"></div>
+							</button>
+						</form>
+					</section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+	<div id="footer-target"></div>
+	<script src="../../..//js/contact-form.js" defer></script>
+    <script src="../../../js/main.js"defer></script>
+    
+	<button id="backToTop" class="back-to-top" aria-label="{{back_to_top_aria_label}}">
+		<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+	</button>
+</body>
+</html>

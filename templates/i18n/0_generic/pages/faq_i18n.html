@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="{{lang_code}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <meta name="tcp-up:labels" content="editorial:HCE, code:ACE">
+    <meta name="tcp-up:editorial-content-origin" content="human">
+    <meta name="tcp-up:editorial-form-origin" content="ai-assisted">
+    <meta name="tcp-up:editorial-ai-role" content="assisted-formulation">
+    <meta name="tcp-up:code-content-origin" content="hybrid">
+    <meta name="tcp-up:code-form-origin" content="hybrid">
+    <meta name="tcp-up:code-ai-role" content="co-construction">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../css/utilities.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/documentation.css">
+    <link rel="stylesheet" href="../../../css/faq.css">
+</head>
+<body>
+
+    <div id="header-target"></div>
+
+    <main class="documentation-container">
+        <a href="javascript:history.back()" class="back-link">{{back_link_text}}</a>
+        <div class="container">
+            <div class="doc-header">
+                <h1 id="top">{{main_heading}}</h1>
+                <p class="subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+                    {{main_subtitle}}
+                </p>
+            </div>
+            <div class="search-wrapper">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="faq-search" placeholder="{{search_placeholder}}">
+                </div>
+            </div>
+        </div>
+
+        <section class="container">
+            <div id="faq-content" class="faq-list">
+
+                <!-- Principes Généraux -->
+                <div class="faq-category-section">
+                    <h2 class="category-title">{{cat_principes_title}}</h2>
+
+                    <article class="faq-card" id="certification-officielle">
+                        <h3>{{q_certification_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_certification_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="ia-detection">
+                        <h3>{{q_detection_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_detection_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="origine">
+                        <h3>{{q_origine_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_origine_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="opposition-ia">
+                        <h3>{{q_opposition_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_opposition_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="contenu-non-textuel">
+                        <h3>{{q_nontextuel_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_nontextuel_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="professionnels">
+                        <h3>{{q_professionnels_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_professionnels_answer}}</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Application Pratique : Choisir le bon Label -->
+                <div class="faq-category-section">
+                    <h2 class="category-title">{{cat_pratique_title}}</h2>
+
+                    <article class="faq-card" id="correction-orthographe">
+                        <h3>{{q_correction_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_correction_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="traduction">
+                        <h3>{{q_traduction_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_traduction_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="plan-ia">
+                        <h3>{{q_plan_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_plan_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="mega-prompt">
+                        <h3>{{q_megaprompt_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_megaprompt_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="code-ia">
+                        <h3>{{q_code_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_code_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="image-ia-retouchee">
+                        <h3>{{q_image_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_image_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="contenu-composite">
+                        <h3>{{q_composite_title}}</h3>
+                        <div class="faq-answer">						
+                            <p>{{q_composite_answer_p1}}</p>
+                            <p>{{q_composite_answer_p2}}</p>									
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="resume-ia">
+                        <h3>{{q_resume_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_resume_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="travail-equipe">
+                        <h3>{{q_equipe_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_equipe_answer}}</p>
+                        </div>
+                    </article>
+					
+					<article class="faq-card" id="etiquetage-audio-video">
+						<h3>{{q_audiovideo_title}}</h3>
+						<div class="faq-answer">
+							<p>{{q_audiovideo_intro}}</p>
+							<ul class="ul-list">
+								<li>{{q_audiovideo_fond}}</li>
+								<li>{{q_audiovideo_forme}}</li>
+							</ul>
+							<p>{{q_audiovideo_exemples_intro}}</p>
+							<ul class="ul-list">
+								<li>{{q_audiovideo_ex1}}</li>
+								<li>{{q_audiovideo_ex2}}</li>
+								<li>{{q_audiovideo_ex3}}</li>
+							</ul>
+						</div>
+					</article>					
+                </div>
+
+                <!-- Éthique et Fiabilité -->
+                <div class="faq-category-section">
+                    <h2 class="category-title">{{cat_ethique_title}}</h2>
+
+                    <article class="faq-card" id="confiance-labels">
+                        <h3>{{q_confiance_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_confiance_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="scribe">
+                        <h3>{{q_scribe_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_scribe_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="devalorisation">
+                        <h3>{{q_devalorisation_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_devalorisation_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="gratuit">
+                        <h3>{{q_gratuit_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_gratuit_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="mise-a-jour-label">
+                        <h3>{{q_maj_label_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_maj_label_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="human-washing">
+                        <h3>{{q_humanwashing_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_humanwashing_answer}}</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Perspectives et Enjeux Sociétaux -->
+                <div class="faq-category-section">
+                    <h2 class="category-title">{{cat_perspectives_title}}</h2>
+
+                    <article class="faq-card" id="compatibilite-cc">
+                        <h3>{{q_compatcc_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_compatcc_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="evolution-ia">
+                        <h3>{{q_evolution_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_evolution_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="crainte-lecteurs">
+                        <h3>{{q_crainte_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_crainte_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="label-h-pertinence">
+                        <h3>{{q_labelh_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_labelh_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="ai-act">
+                        <h3>{{q_aiact_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_aiact_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="contribuer">
+                        <h3>{{q_contribuer_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_contribuer_answer}}</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Précisions sur la méthode -->
+                <div class="faq-category-section">
+                    <h2 class="category-title">{{cat_precisions_title}}</h2>
+
+                    <article class="faq-card" id="distinction-cf">
+                        <h3>{{q_distinctioncf_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_distinctioncf_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="50pourcent">
+                        <h3>{{q_50pourcent_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_50pourcent_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="sections-differentes">
+                        <h3>{{q_sectionsdiff_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_sectionsdiff_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="difference-hca-hce">
+                        <h3>{{q_diffhcahce_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_diffhcahce_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="sous-labels-ace">
+                        <h3>{{q_souslabels_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_souslabels_answer}}</p>
+                        </div>
+                    </article>
+                </div>
+
+				<!-- Questions des sceptiques -->
+				<div class="faq-category-section">
+					<h2 class="category-title">{{cat_sceptiques_title}}</h2>
+
+					<article class="faq-card" id="sceptique-declaratif-inutile">
+						<h3>{{q_sceptique_declaratif_title}}</h3>
+						<div class="faq-answer">
+							<p>{{q_sceptique_declaratif_intro}}</p>
+							<ul class="ul-list">
+								<li>{{q_sceptique_declaratif_li1}}</li>
+								<li>{{q_sceptique_declaratif_li2}}</li>
+								<li>{{q_sceptique_declaratif_li3}}</li>
+							</ul>
+							<p>{{q_sceptique_declaratif_conclusion}}</p>
+						</div>
+					</article>
+
+					<article class="faq-card" id="sceptique-trop-complique">
+						<h3>{{q_sceptique_complique_title}}</h3>
+						<div class="faq-answer">
+							<p>{{q_sceptique_complique_p1}}</p>
+							<p>{{q_sceptique_complique_p2}}</p>
+						</div>
+					</article>
+
+					<article class="faq-card" id="sceptique-elitiste">
+						<h3>{{q_sceptique_elitiste_title}}</h3>
+						<div class="faq-answer">
+							<p>{{q_sceptique_elitiste_answer}}</p>
+						</div>
+					</article>
+
+					<article class="faq-card" id="sceptique-confiance-initiative">
+						<h3>{{q_sceptique_confiance_title}}</h3>
+						<div class="faq-answer">
+							<p>{{q_sceptique_confiance_intro}}</p>
+							<ul class="ul-list">
+								<li>{{q_sceptique_confiance_li1}}</li>
+								<li>{{q_sceptique_confiance_li2}}</li>
+								<li>{{q_sceptique_confiance_li3}}</li>
+							</ul>
+							<p>{{q_sceptique_confiance_conclusion}}</p>
+						</div>
+					</article>
+
+					<article class="faq-card" id="sceptique-ai-act">
+						<h3>{{q_sceptique_aiact_title}}</h3>
+						<div class="faq-answer">
+							<p>{{q_sceptique_aiact_answer}}</p>
+						</div>
+					</article>
+				</div>
+
+                <!-- Mise en œuvre technique -->
+                <div class="faq-category-section">
+                    <h2 class="category-title">{{cat_technique_title}}</h2>
+
+                    <article class="faq-card" id="api-badge">
+                        <h3>{{q_api_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_api_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="meta-google">
+                        <h3>{{q_meta_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_meta_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="badge-visuel-vs-meta">
+                        <h3>{{q_badgevsmeta_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_badgevsmeta_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="compatibilite-licences">
+                        <h3>{{q_licences_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_licences_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="generateur-html">
+                        <h3>{{q_generateur_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_generateur_answer}}</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-card" id="reseaux-sociaux-sans-code">
+                        <h3>{{q_reseaux_title}}</h3>
+                        <div class="faq-answer">
+                            <p>{{q_reseaux_answer}}</p>
+                        </div>
+                    </article>
+					
+					<article class="faq-card" id="signalement-abus">
+						<h3>{{q_signalement_title}}</h3>
+						<div class="faq-answer">
+							<p>{{q_signalement_intro}}</p>
+							<ol style="margin-left: 1.5rem; margin-bottom: 1rem;">
+								<li>{{q_signalement_li1}}</li>
+								<li>{{q_signalement_li2}}</li>
+								<li>{{q_signalement_li3}}</li>
+							</ol>
+							<p>{{q_signalement_conclusion}}</p>
+						</div>
+					</article>					
+					
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-target"></div>
+
+    <script src="../../../js/main.js" defer></script>
+    
+    <button id="backToTop" class="back-to-top" aria-label="{{back_to_top_aria_label}}">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>    
+</body>
+</html>

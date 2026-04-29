@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="{{lang_code}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <meta name="tcp-up:labels" content="editorial:HCE, code:ACE">
+    <meta name="tcp-up:editorial-content-origin" content="human">
+    <meta name="tcp-up:editorial-form-origin" content="ai-assisted">
+    <meta name="tcp-up:editorial-ai-role" content="assisted-formulation">
+    <meta name="tcp-up:code-content-origin" content="hybrid">
+    <meta name="tcp-up:code-form-origin" content="hybrid">
+    <meta name="tcp-up:code-ai-role" content="co-construction">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../css/utilities.css">  
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/documentation.css"> 
+    <link rel="stylesheet" href="../../../css/label-detail.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>        
+</head>
+<body>
+    <div id="header-target"></div>
+
+    <main class="label-detail-container">
+        <a href="../index.html#labels-d" class="back-link">{{back_link_text}}</a>
+
+        <div class="label-sheet">
+            <aside class="label-sidebar">
+                <div class="label-visual-group">
+                    <img src="../../../img/icon_ace.webp" alt="{{sidebar_icon_alt}}" class="detail-top-logo mb-20">
+                    <div class="detail-badge-box">
+                        <span class="detail-percent-tag">{{sidebar_tagline}}</span>
+                        <h1 class="text-ace">{{sidebar_label_name}}</h1>
+                        <p class="text-italic">{{sidebar_label_subtitle}}</p>
+                    </div>
+                </div>
+
+                <div class="technical-meta">
+					<div class="meta-item">
+						<span class="meta-label">{{meta_badge_simple_label}}</span>						
+						<div class="badge-gallery mt-10">							
+							<div class="sig-item">
+								<span class="sig-label">{{badge_color_variant_label}}</span>
+								<img src="../../../img/badges/svg/badge_ace_co.svg" alt="{{badge_color_alt}}" class="badge-img-preview">
+							</div>
+						
+							<div class="sig-item">
+								<span class="sig-label">{{badge_transparent_variant_label}}</span>
+								<img src="../../../img/badges/svg/badge_ace_tr_co.svg" alt="{{badge_transparent_alt}}" class="badge-img-preview">
+							</div>
+						</div>						
+					</div>  	
+                    <div class="meta-item">
+                        <span class="meta-label">{{meta_badge_complet_label}}</span>
+						<div class="badge-fu-tr-co ace mb-10">
+							<div class="badge-header">{{badge_full_header}}</div>
+							<div class="badge-details">{{badge_full_details}}</div>
+							<div class="badge-footer">{{badge_full_footer}}</div>
+						</div>
+                    </div>
+                  					
+                    <div class="meta-item">
+                        <span class="meta-label">{{meta_text_pur_label}}</span>
+                        <pre class="signature-box">{{text_pur_signature}}</pre>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">{{meta_bloc_signature_label}}</span>
+                        <pre class="signature-box">{{bloc_signature}}</pre>
+                    </div>
+                    <div class="meta-item">
+						<span class="meta-label">{{meta_metadata_label}}</span>
+						<div class="code-block">
+							<pre><code class="language-markup text-sm">{{metadata_example}}</code></pre>
+						</div>
+                    </div>                      
+                    
+                </div>
+				<div class="download-cta mt-30">
+					<p class="small-text mb-10">{{sidebar_download_call}}</p>
+					<a href="download.html" class="btn-sidebar-download">{{sidebar_download_link}}</a>
+				</div>
+				
+				<p class="label-philosophy mt-30">{{sidebar_disclaimer}}</p>                
+            </aside>
+
+            <section class="label-content">
+                <div class="label-main-visual-container">      
+                    <img src="../../../img/logo_ace.webp" alt="{{content_logo_alt}}" class="detail-main-logo">
+                </div>
+                            
+                <div class="spec-section">
+                    <h3><span class="text-accent">{{spec_philosophy_number}}.</span> {{spec_philosophy_title}}</h3>
+                    <div class="spec-section quote-section">
+                        <p class="mb-20">{{philosophy_quote_intro}}</p>
+                        <p class="label-philosophy">{{philosophy_quote}}</p>
+                    </div>                    
+                </div>        
+                        
+                <div class="spec-section">
+                    <h3><span class="text-accent">{{spec_definition_number}}.</span> {{spec_definition_title}}</h3>
+                    <p>{{definition_text}}</p>
+                </div>
+
+                <div class="spec-section">
+                    <h3><span class="text-accent">{{spec_usecase_number}}.</span> {{spec_usecase_title}}</h3>
+                    <p>{{usecase_text}}</p>
+                </div>
+
+                <div class="spec-section">
+                    <h3><span class="text-accent">{{spec_examples_number}}.</span> {{spec_examples_title}}</h3>
+                    <div class="example-grid">
+                        <div class="example-item mb-20">
+                            <strong>{{example1_title}}</strong>
+                            <p>{{example1_text}}</p>
+                        </div>
+                        <div class="example-item mb-20">
+                            <strong>{{example2_title}}</strong>
+                            <p>{{example2_text}}</p>
+                        </div>
+                        <div class="example-item">
+                            <strong>{{example3_title}}</strong>
+                            <p>{{example3_text}}</p>
+                        </div>
+                    </div>
+                </div>
+
+				<div class="spec-section">
+					<h3><span class="text-accent">{{spec_edgecases_number}}.</span> {{spec_edgecases_title}}</h3>
+					<div class="example-grid">
+						<div class="example-item mb-20">
+							<strong>{{edgecase1_title}}</strong>
+							<p>{{edgecase1_text}}</p>
+						</div>
+						<div class="example-item mb-20">
+							<strong>{{edgecase2_title}}</strong>
+							<p>{{edgecase2_text}}</p>
+						</div>
+						<div class="example-item">
+							<strong>{{edgecase3_title}}</strong>
+							<p>{{edgecase3_text}}</p>
+						</div>
+						<span class="text-sm text-light-grey"><em>{{edgecases_more_info}}</em></span>
+					</div>
+				</div>
+
+                <div class="spec-section">
+                    <h3><span class="text-accent">{{spec_prompts_number}}.</span> {{spec_prompts_title}}</h3>
+                    <div class="prompt-box mb-20">
+                        <strong>{{prompt1_label}}</strong>
+                        <p>{{prompt1_text}}</p>
+                    </div>
+                    <div class="prompt-box mb-20">
+                        <strong>{{prompt2_label}}</strong>
+                        <p>{{prompt2_text}}</p>
+                    </div>
+					<div class="prompt-box mb-20">
+						<strong>{{prompt3_label}}</strong>
+						<p>{{prompt3_text}}</p>
+					</div>
+					<div class="prompt-box">
+						<strong>{{prompt4_label}}</strong>
+						<p>{{prompt4_text}}</p>
+					</div>                    
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-target"></div>
+    
+    <script src="../../../js/main.js" defer></script>
+    
+    <button id="backToTop" class="back-to-top" aria-label="{{back_to_top_aria_label}}">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>    
+</body>
+</html>

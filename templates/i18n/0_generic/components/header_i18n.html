@@ -1,0 +1,51 @@
+<nav class="nav-container">
+    <a href="index.html" class="logo-link" aria-label="{{aria_label_logo}}">
+        <img src="/img/icon_tcp-up-header.webp" alt="{{logo_alt}}" class="logo-icon">
+    </a>
+
+    <div class="nav-controls">
+        <button class="burger-menu" id="burger-btn" aria-label="{{aria_label_open_menu}}">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+	<ul id="nav-links">
+		<li class="has-dropdown">
+			<a href="javascript:void(0)" class="dropdown-trigger">{{nav_project}}</a>
+			<ul class="dropdown-menu">
+				<li><a href="#pourquoi">{{nav_why}}</a></li>
+				<li><a href="#pourqui">{{nav_forwho}}</a></li>
+			</ul>
+		</li>
+
+		<li class="has-dropdown">
+			<a href="javascript:void(0)" class="dropdown-trigger">{{nav_charter}}</a>
+			<ul class="dropdown-menu">
+				<li><a href="#charte">{{nav_what}}</a></li>
+				<li><a href="#piliers">{{nav_pillars}}</a></li>
+				<li><a href="#labels">{{nav_labels}}</a></li>
+				<li><a href="#ethique">{{nav_ethics}}</a></li>
+			</ul>
+		</li>
+		
+		<li class="has-dropdown">
+			<a href="javascript:void(0)" class="dropdown-trigger">{{nav_usage}}</a>
+			<ul class="dropdown-menu">
+				<li><a href="#etiquetage">{{nav_tagging_guide}}</a></li>
+				<li><a href="/pages/wizard.html">{{nav_wizard}}</a></li>				
+				<li><a href="#ressources">{{nav_resources}}</a></li>
+			</ul>
+		</li>
+		<li><a href="/pages/faq.html">{{nav_faq}}</a></li>
+		<li><a href="/pages/community.html">{{nav_community}}</a></li>
+		<li><a href="/blog/">{{nav_blog}}</a></li>          
+        <li><a href="/pages/about.html">{{nav_about}}</a></li>
+		<li class="nav-contact">
+			<a href="/pages/contact.html" title="{{nav_contact_title}}" class="contact-icon-link">
+				<i class="fa-regular fa-envelope"></i> 
+			</a>
+		</li>
+	</ul>
+</nav>

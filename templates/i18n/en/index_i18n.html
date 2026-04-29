@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="{{lang_code}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <meta name="tcp-up:labels" content="editorial:HCE, code:ACE">
+    <meta name="tcp-up:editorial-content-origin" content="human">
+    <meta name="tcp-up:editorial-form-origin" content="ai-assisted">
+    <meta name="tcp-up:editorial-ai-role" content="assisted-formulation">
+    <meta name="tcp-up:code-content-origin" content="hybrid">
+    <meta name="tcp-up:code-form-origin" content="hybrid">
+    <meta name="tcp-up:code-ai-role" content="co-construction">
+    <meta name="google-site-verification" content="4GdQDYXOntn1FGC0QiOgO-Cl52w7IDW46qaRy70Kxks" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/utilities.css">    
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+	<div id="header-target"></div>
+
+    <header>
+		<h1>{{hero_title}}</h1>
+		<p class="subtitle">
+			{{hero_subtitle}}
+		</p>
+		<div class="btn-group">
+			<a href="#ressources" class="btn btn-primary">{{hero_download_labels}}</a>
+			<a href="#pourquoi" class="btn btn-secondary">{{hero_learn_more}}</a>
+		</div>
+    </header>
+
+	<section id="pourquoi" class="dark-section">
+		<div class="container">
+			<h2>{{why_title}}</h2>
+			<p class="subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+				{{why_subtitle}}
+			</p>				
+			<div class="grid-3 mb-60">
+				<div class="card-info">
+					<h3>{{why_card1_title}}</h3>
+					<p>{{why_card1_text}}</p>
+				</div>
+				<div class="card-info">
+					<h3>{{why_card2_title}}</h3>
+					<p>{{why_card2_text}}</p>
+				</div>
+				<div class="card-info">
+					<h3>{{why_card3_title}}</h3>
+					<p>{{why_card3_text}}</p>
+				</div>
+			</div>
+			<div class="text-center">
+				<a href="/pages/manifeste.html" class="btn btn-secondary"><i class="fa-solid fa-bullhorn"></i> {{why_read_manifesto}}</a>
+			</div>
+			<div class="text-center mt-40">
+				<p style="font-size: 0.9rem; opacity: 0.7;">
+					{{why_github_cta}}
+				</p>
+			</div>			
+		</div>
+	</section>
+
+	<section id="pourqui" class="light-section">
+		<div class="container">
+			<h2>{{who_title}}</h2>
+			<p class="subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+				{{who_subtitle}}
+			</p>
+
+			<div class="grid-2">
+				<div class="card-info">
+					<h3>{{who_card1_title}}</h3>
+					<p>{{who_card1_text}}</p>
+				</div>
+				<div class="card-info">
+					<h3>{{who_card2_title}}</h3>
+					<p>{{who_card2_text}}</p>
+				</div>
+				<div class="card-info">
+					<h3>{{who_card3_title}}</h3>
+					<p>{{who_card3_text}}</p>
+				</div>
+				<div class="card-info">
+					<h3>{{who_card4_title}}</h3>
+					<p>{{who_card4_text}}</p>
+				</div>
+			</div>
+
+			<div class="footer-note">
+				<p>{{who_footer_note}}</p>
+			</div>
+			
+			<div class="text-center mt-40">
+				<p style="font-size: 0.9rem; opacity: 0.7;">
+					{{who_registry_paragraph}}
+				</p>
+			</div>			
+		</div>
+	</section>
+
+	<section id="charte" class="dark-section">
+		<div class="container">
+			<h2 class="mb-40">{{charter_title}}</h2>
+			
+			<p class="subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+				{{charter_subtitle}}
+			</p>
+
+			<div class="charte-grid">
+				<div class="charte-card">
+					<h3 class="text-accent">{{charter_card1_title}}</h3>
+					<p class="mb-20 opacity-75">{{charter_card1_desc}}</p>
+					<ul class="ul-list">
+						<li>{{charter_card1_point1}}</li>
+						<li>{{charter_card1_point2}}</li>
+						<li>{{charter_card1_point3}}</li>
+					</ul>					
+				</div>
+
+				<div class="charte-card">
+					<h3 class="text-accent">{{charter_card2_title}}</h3>
+					<p class="mb-20 opacity-75">{{charter_card2_desc}}</p>
+					<ul class="ul-list">
+						<li>{{charter_card2_point1}}</li>		
+					</ul>	
+				</div>
+			</div>
+
+			<p class="charte-note mt-30">
+				{{charter_note}}
+			</p>
+
+			<div class="text-center mt-50">
+				<a href="#" class="btn btn-secondary" style="pointer-events: none; opacity: 0.7;" aria-disabled="true">
+					<i class="fa-solid fa-file-contract"></i> {{charter_read_full}}
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="piliers" class="light-section">
+		<div class="container">
+			<h2>{{pillars_title}}</h2>
+			<p class="subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+				{{pillars_subtitle}}
+			</p>
+
+			<div class="grid-2">
+				<div class="certif-card" style="border-left: 4px solid var(--accent-blue);">
+					<div class="certif-number" >01</div>				
+					<h3 class="mt-10"style="color: var(--accent-blue); font-size: 1.3rem;">{{pillars_card1_title}}</h3>
+					<p>{{pillars_card1_text}}</p>
+				</div>
+				
+				<div class="certif-card" style="border-left: 4px solid var(--accent-blue);">
+					<div class="certif-number" >02</div>				
+					<h3 class="mt-10"style="color: var(--accent-blue); font-size: 1.3rem;">{{pillars_card2_title}}</h3>
+					<p>{{pillars_card2_text}}</p>
+				</div>
+				
+				<div class="certif-card" style="border-left: 4px solid var(--accent-blue);">
+					<div class="certif-number" >03</div>				
+					<h3 class="mt-10"style="color: var(--accent-blue); font-size: 1.3rem;">{{pillars_card3_title}}</h3>
+					<p>{{pillars_card3_text}}</p>
+				</div>
+				
+				<div class="certif-card" style="border-left: 4px solid var(--accent-blue);">
+					<div class="certif-number" >04</div>				
+					<h3 class="mt-10"style="color: var(--accent-blue); font-size: 1.3rem;">{{pillars_card4_title}}</h3>
+					<p>{{pillars_card4_text}}</p>
+				</div>							
+			</div>
+		</div>
+	</section>		
+	
+	<section id="labels" class="dark-section">
+		<div class="container">
+			<h2>{{labels_title}}</h2>
+			<p class="subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+				{{labels_subtitle}}
+			</p>			
+			<div class="labels-grid">
+
+				<a href="pages/label-huc.html" class="label-wrapper chuc">
+					<img src="../../img/logo_huc_ns.webp" alt="{{label_logo_alt_huc}}" class="label-top-logo">
+					<div class="squircle">
+						<div class="label-content-top">
+							<div class="sig-item mb-20">
+								<span class="badge-tr-co huc">[TCP/UP: HUC]</span>
+							</div>
+							<p class="label-desc mb-20">{{labels_huc_short_title}}</p>
+							<p class="label-desc mb-20">{{labels_huc_desc}}</p>
+						</div>
+						<p class="label-philosophy border-left-huc">{{labels_huc_philosophy}}</p>
+					</div>
+				</a>
+
+				<a href="pages/label-hca.html" class="label-wrapper chca">
+					<img src="../../img/logo_hca_ns.webp" alt="{{label_logo_alt_hca}}" class="label-top-logo">
+					<div class="squircle">
+						<div class="label-content-top">
+							<div class="sig-item mb-20">
+								<span class="badge-tr-co hca">[TCP/UP: HCA]</span>
+							</div>
+							<p class="label-desc mb-20">{{labels_hca_short_title}}</p>
+							<p class="label-desc mb-20">{{labels_hca_desc}}</p>
+						</div>
+						<p class="label-philosophy border-left-hca">{{labels_hca_philosophy}}</p>
+					</div>
+				</a>
+
+				<a href="pages/label-hce.html" class="label-wrapper chce">
+					<img src="../../img/logo_hce_ns.webp" alt="{{label_logo_alt_hce}}" class="label-top-logo">
+					<div class="squircle">
+						<div class="label-content-top">
+							<div class="sig-item mb-20">
+								<span class="badge-tr-co hce">[TCP/UP: HCE]</span>
+							</div>	
+							<p class="label-desc mb-20">{{labels_hce_short_title}}</p>
+							<p class="label-desc mb-20">{{labels_hce_desc}}</p>
+						</div>
+						<p class="label-philosophy border-left-hce">{{labels_hce_philosophy}}</p>
+					</div>
+				</a>
+
+				<a href="pages/label-ace.html" class="label-wrapper cace">
+					<img src="../../img/logo_ace_ns.webp" alt="{{label_logo_alt_ace}}" class="label-top-logo">
+					<div class="squircle">
+						<div class="label-content-top">
+							<div class="sig-item mb-20">
+								<span class="badge-tr-co ace">[TCP/UP: ACE]</span>
+							</div>	
+							<p class="label-desc mb-20">{{labels_ace_short_title}}</p>
+							<p class="label-desc mb-20">{{labels_ace_desc}}</p>
+						</div>
+						<p class="label-philosophy border-left-ace">{{labels_ace_philosophy}}</p>
+					</div>
+				</a>
+
+				<a href="pages/label-aic.html" class="label-wrapper caic">
+					<img src="../../img/logo_aic_ns.webp" alt="{{label_logo_alt_aic}}" class="label-top-logo">
+					<div class="squircle">
+						<div class="label-content-top">
+							<div class="sig-item mb-20">
+								<span class="badge-tr-co aic">[TCP/UP: AIC]</span>
+							</div>	
+							<p class="label-desc mb-20">{{labels_aic_short_title}}</p>
+							<p class="label-desc mb-20">{{labels_aic_desc}}</p>
+						</div>
+						<p class="label-philosophy border-left-aic">{{labels_aic_philosophy}}</p>
+					</div>
+				</a>
+			</div>
+
+			<!-- Deux blocs côte à côte -->
+			<div class="labels-2col mt-50">
+				<!-- Bloc Synthèse -->
+				<div class="synth-card">
+					<h3 class="synth-title">{{labels_synthesis_title}}</h3>
+					<div class="synth-list">
+						<div class="synth-item">
+							<span class="badge-co huc ft-1">[TCP/UP: HUC]</span>
+							<span class="synth-text">{{labels_synthesis_item1}}</span>
+						</div>
+						<div class="synth-item">
+							<span class="badge-co hca ft-1">[TCP/UP: HCA]</span>
+							<span class="synth-text">{{labels_synthesis_item2}}</span>
+						</div>
+						<div class="synth-item">
+							<span class="badge-co hce ft-1">[TCP/UP: HCE]</span>
+							<span class="synth-text">{{labels_synthesis_item3}}</span>
+						</div>
+						<div class="synth-item">
+							<span class="badge-co ace ft-1">[TCP/UP: ACE]</span>
+							<span class="synth-text">{{labels_synthesis_item4}}</span>
+						</div>
+						<div class="synth-item">
+							<span class="badge-co aic ft-1">[TCP/UP: AIC]</span>
+							<span class="synth-text">{{labels_synthesis_item5}}</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Bloc Approfondir -->
+				<div class="synth-card">
+					<h3 class="synth-title">{{labels_deep_title}}</h3>
+					<p style="margin-bottom: 1.5rem; line-height: 1.6;">
+						{{labels_deep_text1}}
+					</p>
+					<p style="margin-bottom: 1.5rem; line-height: 1.6;">
+						{{labels_deep_text2}}
+					</p>
+					<div class="mt-40" style="text-align: center;">
+						<a href="/pages/logique-labels.html" class="btn btn-secondary">
+							<i class="fa-solid fa-diagram-project"></i> {{labels_deep_button}}
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-note">
+				<p>{{labels_footer_note}}</p>
+			</div>
+		</div>
+	</section>	
+	
+	<section id="ethique" class="light-section">
+		<div class="container">
+			<h2>{{ethics_title}}</h2>
+			<p class="subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+				{{ethics_subtitle}}
+			</p>
+
+			<div class="grid-2 mb-60">
+				<div class="card-info">
+					<h3>{{ethics_card1_title}}</h3>
+					<p>{{ethics_card1_text}}</p>
+				</div>
+				<div class="card-info">
+					<h3>{{ethics_card2_title}}</h3>
+					<p>{{ethics_card2_text}}</p>
+				</div>
+			</div>
+
+			<div class="text-center">
+				<a href="/pages/ethique.html" class="btn btn-secondary">
+					<i class="fa-solid fa-book-open"></i> {{ethics_read_charter}}
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="etiquetage" class="dark-section">
+		<div class="container">
+			<h2 class="section-title">{{tagging_title}}</h2>
+			<p class="subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+				{{tagging_subtitle}}
+			</p>
+
+			<div class="certif-grid mb-60">
+				<div class="certif-card">
+					<div class="certif-number">01</div>
+					<div class="certif-icon"><i class="fa-solid fa-microscope"></i></div>
+					<h3>{{tagging_step1_title}}</h3>
+					<p>{{tagging_step1_desc}}</p>
+				</div>
+
+				<div class="certif-card">
+					<div class="certif-number">02</div>
+					<div class="certif-icon"><i class="fa-solid fa-tag"></i></div>
+					<h3>{{tagging_step2_title}}</h3>
+					<p>{{tagging_step2_desc}}</p>
+				</div>
+
+				<div class="certif-card">
+					<div class="certif-number">03</div>
+					<div class="certif-icon"><i class="fa-solid fa-code"></i></div>
+					<h3>{{tagging_step3_title}}</h3>
+					<p>{{tagging_step3_desc}}</p>
+				</div>
+			</div>
+
+			<div class="btn-group">
+				<a href="pages/documentation.html" class="btn btn-secondary"><i class="fa-solid fa-book"></i> {{tagging_guide_button}}</a>
+			</div>			
+		</div>
+	</section>
+
+	<section id="ressources" class="light-section">
+		<div class="container">
+			<h2 style="text-align: center;">{{resources_title}}</h2>
+			<p class="subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+				{{resources_subtitle}}
+			</p>
+			
+			<div class="grid-2">
+				<div class="resource-card primary-card">
+					<div class="certif-icon">
+						<i class="fa-solid fa-box-archive"></i>
+					</div>
+					<h3>{{resources_kit_title}}</h3>
+					<p>{{resources_kit_desc}}</p>
+					
+					<div class="resource-list-wrapper">
+						<ul class="ul-list" style="margin: 0;">
+							<li>{{resources_kit_item1}}</li>
+							<li>{{resources_kit_item2}}</li>
+						</ul>
+					</div>
+					<div class="kit-preview-link">
+						<a href="pages/download.html#kit"><i class="fa-solid fa-magnifying-glass"></i> {{resources_kit_detail_link}}</a>
+					</div>					
+					<a href="https://cdn.jsdelivr.net/gh/taltan/tcp-up-assets/kits/kit_tcp_up_v1.0.zip" class="btn btn-primary" style="pointer-events: none; opacity: 0.7;" aria-disabled="true"><i class="fa-solid fa-download"></i> {{resources_kit_download_btn}}</a>
+				</div>
+
+				<div class="resource-card">
+					<div class="certif-icon">
+						<i class="fa-solid fa-layer-group"></i>
+					</div>
+					<h3>{{resources_lib_title}}</h3>
+					<p>{{resources_lib_desc}}</p>
+					
+					<div class="resource-list-wrapper">
+						<ul class="ul-list" style="margin: 0;">
+							<li>{{resources_lib_item1}}</li>
+							<li>{{resources_lib_item2}}</li>
+							<li>{{resources_lib_item3}}</li>
+							<li>{{resources_lib_item4}}</li>
+						</ul>
+					</div>
+					
+					<a href="pages/download.html" class="btn btn-secondary">
+						<i class="fa-solid fa-arrow-right-long"></i> {{resources_lib_button}}
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="observatoire" class="dark-section">
+		<div class="container text-center">
+			<h2>{{observatory_title}}</h2>
+			<p class="subtitle" style="max-width: 700px; margin: 0 auto 1.5rem auto;">
+				{{observatory_subtitle}}
+			</p>
+			<p class="mb-30 opacity-70" style="max-width: 650px; margin-left: auto; margin-right: auto;">
+				{{observatory_text}}
+			</p>
+			<a href="/blog/" class="btn btn-secondary">
+				<i class="fa-solid fa-arrow-right"></i> {{observatory_button}}
+			</a>
+		</div>
+	</section>	
+
+	<div id="footer-target"></div>
+
+    <script src="../../js/main.js" defer></script>
+    
+	<button id="backToTop" class="back-to-top" aria-label="{{back_to_top_aria_label}}">
+		<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+	</button>
+
+</body>
+</html>

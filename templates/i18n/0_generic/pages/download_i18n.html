@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="{{lang_code}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <meta name="tcp-up:labels" content="editorial:HCE, code:ACE">
+    <meta name="tcp-up:editorial-content-origin" content="human">
+    <meta name="tcp-up:editorial-form-origin" content="ai-assisted">
+    <meta name="tcp-up:editorial-ai-role" content="assisted-formulation">
+    <meta name="tcp-up:code-content-origin" content="hybrid">
+    <meta name="tcp-up:code-form-origin" content="hybrid">
+    <meta name="tcp-up:code-ai-role" content="co-construction">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../css/utilities.css">  
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/documentation.css">    
+    <link rel="stylesheet" href="../../../css/download.css">
+    <link rel="stylesheet" href="../../../css/meta-generator.css">    
+</head>
+<body>
+
+    <div id="header-target"></div>
+
+    <main class="documentation-container">
+        <a href="javascript:history.back()" class="back-link">{{back_link_text}}</a>
+        <div class="doc-header">
+            <h1>{{main_heading}}</h1>
+			<p class="subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+				{{main_subtitle}}
+			</p>            
+		</div>
+        
+        <section id="intro" class="doc-section pt-20 pb-20">
+            <h2>{{intro_heading}}</h2>
+            <p>{{intro_text}}</p>
+        </section>
+        
+        <section id="guide" class="doc-section pt-20 pb-20">
+            <h2>{{guide_heading}}</h2>            
+            
+            <h3>{{guide_meta_heading}}</h3>
+            <p>{{guide_meta_text}}</p>
+            <h3>{{guide_labels_heading}}</h3>
+            <p>{{guide_labels_intro}}</p>       
+            <ul class="ul-list mb-20">
+                <li>{{guide_labels_svg}}</li>
+                <li>{{guide_labels_webp}}</li>
+                <li>{{guide_labels_html}}</li>
+                <li>{{guide_labels_text}}</li>
+            </ul>
+        </section> 
+        
+		<section id="color" class="doc-section pt-0 pb-20">
+			<h2>{{color_heading}}</h2>
+			<p>{{color_text}}</p>
+			
+			<div class="variant-showcase">
+				<div class="variant-item">
+					<img src="../../../img/badges/svg/badge_huc_co.svg" alt="{{variant_alt_co}}" loading="lazy">
+					<span class="variant-label">{{variant_label_co}}</span>
+				</div>
+				<div class="variant-item">
+					<img src="../../../img/badges/svg/badge_huc_bc.svg" alt="{{variant_alt_bc}}" loading="lazy">
+					<span class="variant-label">{{variant_label_bc}}</span>
+				</div>
+				<div class="variant-item">
+					<img src="../../../img/badges/svg/badge_huc_wb.svg" alt="{{variant_alt_wb}}" loading="lazy">
+					<span class="variant-label">{{variant_label_wb}}</span>
+				</div>
+				<div class="variant-item">
+					<img src="../../../img/badges/svg/badge_huc_bw.svg" alt="{{variant_alt_bw}}" loading="lazy">
+					<span class="variant-label">{{variant_label_bw}}</span>
+				</div>
+				<div class="variant-item">
+					<img src="../../../img/badges/svg/badge_huc_tr_co.svg" alt="{{variant_alt_tr_co}}" loading="lazy">
+					<span class="variant-label">{{variant_label_tr_co}}</span>
+				</div>
+				<div class="variant-item">
+					<img src="../../../img/badges/svg/badge_huc_tr_wh.svg" alt="{{variant_alt_tr_wh}}" loading="lazy">
+					<span class="variant-label">{{variant_label_tr_wh}}</span>
+				</div>
+				<div class="variant-item">
+					<img src="../../../img/badges/svg/badge_huc_tr_bl.svg" alt="{{variant_alt_tr_bl}}" loading="lazy">
+					<span class="variant-label">{{variant_label_tr_bl}}</span>
+				</div>
+			</div>
+		</section>        
+        
+        <section id="kit" class="doc-section pt-0 pb-20">
+            <h2>{{kit_heading}}</h2>
+            <div class="download-variants">
+                <p>{{kit_intro}}</p> 
+                <ul class="ul-list mb-20">
+                    <li>{{kit_item1}}</li>
+                    <li>{{kit_item2}}</li>
+                    <li>{{kit_item3}}</li>
+                    <li>{{kit_item4}}</li>
+                </ul>
+                <p class="text-italic opacity-80 pl-15">
+                {{kit_note}}</p> 
+            </div>
+            <div class="text-center mt-40 mb-0">
+                <a href="https://cdn.jsdelivr.net/gh/taltan/tcp-up-assets/kits/kit_tcp_up_v1.0.zip" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; pointer-events: none; opacity: 0.7; aria-disabled="true"">{{kit_download_btn}}</a>
+            </div>
+        </section>
+        
+        <section id="meta" class="doc-section pt-20 pb-20">
+            <h2>{{meta_heading}}</h2>
+            <p>{{meta_intro}}</p>
+            <ul class="ul-list">
+				<li>{{meta_step1}}</li>
+				<li>{{meta_step2}}</li>
+				<li>{{meta_step3}}</li>
+				<li>{{meta_step4}}</li>
+			</ul>
+			<div class="generator-container">
+				<div class="generator-toolbar">
+					<button id="add-item-btn" class="btn-icon">
+						{{meta_add_button}}
+					</button>
+				</div>
+
+				<div id="items-container" class="items-container">
+					<!-- Les lignes de contenu sont injectées ici -->
+				</div>        
+				
+				<div class="generator-output">
+					<div class="output-header">
+						<h3>{{meta_output_title}}</h3>
+						<button id="copy-btnge" class="copy-btnge">
+							{{meta_copy_button}}
+						</button>
+					</div>
+					<div class="code-block">
+						<pre><code id="output-code" class="language-html"></code></pre>
+					</div>
+					<div id="warning-msg" class="warning" style="display:none;"></div>
+					<p class="generator-hint">{{meta_hint}}</p>
+				</div>            
+				
+			</div>            
+            
+        </section>
+                 
+        <section id="badges"class="doc-section pt-0 pb-20">
+            <h2>{{badges_heading}}</h2>
+            <p>{{badges_intro}}</p>
+            
+			<!-- Sélecteur de jeu de couleurs -->
+			<div class="style-selector-container mt-20 mb-0 ">
+				<label for="styleSelector">{{badges_style_label}}</label>
+				<select id="styleSelector" class="style-selector"></select>
+				<div id="stylePreview" class="style-preview">
+				<!-- Aperçu avec le label HUC -->
+				</div>
+			</div>   
+         
+        </section>                     
+
+
+        <div id="badges-container"></div>
+    </main>
+
+    <div id="footer-target"></div>
+
+    <script src="../../../js/main.js" defer></script>
+    <script src="../../..//js/download.js" defer></script>
+    <script src="../../..//js/meta-generator.js" defer></script>    
+    
+    <button id="backToTop" class="back-to-top" aria-label="{{back_to_top_aria_label}}">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+</body>
+</html>

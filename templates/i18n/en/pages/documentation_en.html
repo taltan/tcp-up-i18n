@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="{{lang_code}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <meta name="tcp-up:labels" content="editorial:HCE, code:ACE">
+    <meta name="tcp-up:editorial-content-origin" content="human">
+    <meta name="tcp-up:editorial-form-origin" content="ai-assisted">
+    <meta name="tcp-up:editorial-ai-role" content="assisted-formulation">
+    <meta name="tcp-up:code-content-origin" content="hybrid">
+    <meta name="tcp-up:code-form-origin" content="hybrid">
+    <meta name="tcp-up:code-ai-role" content="co-construction">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../css/utilities.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/documentation.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>    
+</head>
+<body>
+
+    <div id="header-target"></div>
+
+    <main class="documentation-container">
+    <a href="javascript:history.back()" class="back-link">{{back_link_text}}</a>
+	<div class="doc-layout">		
+		<div class="doc-content-wrapper">
+			<div class="doc-header">
+				<h1>{{doc_main_title}}</h1>
+				<p class="doc-version">{{doc_version}}</p>
+			</div>
+
+			<section id="dc-intro" class="doc-section">
+				<h2>{{doc_intro_heading}}</h2>
+				<div class="content-section">
+					<p>{{doc_intro_p1}}</p>
+					<p>{{doc_intro_p2}}</p>
+					
+					<div class="note-warning" style="margin-top: 1.5rem;">
+						{{doc_intro_warning}}
+					</div>
+					
+					<p class="text-italic opacity-80 pl-15 mt-15" style="border-left: 3px solid #38bdf8;">
+						{{doc_intro_note}}
+					</p>	
+					
+				</div>
+			</section>
+
+			<section id="dc-1" class="doc-section">	
+				<h2>{{doc_s1_heading}}</h2>
+					<div class="content-section">
+					<p>{{doc_s1_intro}}</p>
+					
+					<div class="decision-tree">
+						<div class="decision-question">{{doc_s1_q1}}</div>
+						<ul class="ul-list-d">
+							<li>{{doc_s1_q1_li1}}</li>
+							<li>{{doc_s1_q1_li2}}</li>
+						</ul>
+
+						<div class="decision-question">{{doc_s1_q2}}</div>
+						<ul class="ul-list-d">
+							<li>{{doc_s1_q2_li1}}</li>
+							<li>{{doc_s1_q2_li2}}</li>
+						</ul>
+
+						<div class="decision-question">{{doc_s1_q3}}</div>
+						<ul class="ul-list-d">
+							<li>{{doc_s1_q3_li1}}</li>
+							<li>{{doc_s1_q3_li2}}</li>
+						</ul>
+
+						<div class="decision-question">{{doc_s1_q4}}</div>
+						<ul class="ul-list-d">
+							<li>{{doc_s1_q4_li1}}</li>
+							<li>{{doc_s1_q4_li2}}</li>
+						</ul>
+						
+					<p class="text-italic opacity-80 pl-15 mt-15" style="border-left: 3px solid #38bdf8;">
+						{{doc_s1_variant}}
+					</p>		
+							
+					<p class="text-italic opacity-80 pl-15 mt-15" style="border-left: 3px solid #38bdf8;">
+						{{doc_s1_prudence}}
+					</p> 				
+					</div>
+				</div>
+			</section>
+
+			<section id="dc-2" class="doc-section">
+
+					<h2>{{doc_s2_heading}}</h2>
+					<div class="content-section">
+						<div class="label-table-wrapper">
+							<table class="label-table">
+								<thead>
+									<tr><th>{{doc_s2_table_th1}}</th><th>{{doc_s2_table_th2}}</th><th>{{doc_s2_table_th3}}</th><th>{{doc_s2_table_th4}}</th><th>{{doc_s2_table_th5}}</th></tr>
+								</thead>
+								<tbody>
+									<tr><td><strong>{{doc_s2_label_huc}}</strong></td><td>{{doc_s2_huc_fond}}</td><td>{{doc_s2_huc_form}}</td><td>{{doc_s2_huc_def}}</td><td>{{doc_s2_huc_use}}</td></tr>
+									<tr><td><strong>{{doc_s2_label_hca}}</strong></td><td>{{doc_s2_hca_fond}}</td><td>{{doc_s2_hca_form}}</td><td>{{doc_s2_hca_def}}</td><td>{{doc_s2_hca_use}}</td></tr>
+									<tr><td><strong>{{doc_s2_label_hce}}</strong></td><td>{{doc_s2_hce_fond}}</td><td>{{doc_s2_hce_form}}</td><td>{{doc_s2_hce_def}}</td><td>{{doc_s2_hce_use}}</td></tr>
+									<tr><td><strong>{{doc_s2_label_ace}}</strong></td><td>{{doc_s2_ace_fond}}</td><td>{{doc_s2_ace_form}}</td><td>{{doc_s2_ace_def}}</td><td>{{doc_s2_ace_use}}</td></tr>
+									<tr><td><strong>{{doc_s2_label_aic}}</strong></td><td>{{doc_s2_aic_fond}}</td><td>{{doc_s2_aic_form}}</td><td>{{doc_s2_aic_def}}</td><td>{{doc_s2_aic_use}}</td></tr>
+								</tbody>
+							</table>
+						</div>
+
+						<h3>{{doc_s2_examples_title}}</h3>
+						<div class="grid-2">
+							<div class="example-card">{{doc_s2_example_huc}}</div>
+							<div class="example-card">{{doc_s2_example_hca}}</div>
+							<div class="example-card">{{doc_s2_example_hce}}</div>
+							<div class="example-card">{{doc_s2_example_ace}}</div>
+							<div class="example-card">{{doc_s2_example_aic}}</div>
+						</div>
+					</div>
+					<p class="text-italic opacity-80 pl-15 mt-15" style="border-left: 3px solid #38bdf8;">
+						{{doc_s2_cas_particuliers}}
+					</p> 
+
+			</section>
+			
+			<section id="dc-3" class="doc-section">
+				<h2>{{doc_s3_heading}}</h2>
+				<div class="content-section">
+					<p>{{doc_s3_intro}}</p>
+
+					<h3 id="dc-3.1">{{doc_s3_1_title}}</h3>
+					<p>{{doc_s3_1_text}}</p>
+					<p class="text-italic opacity-80 pl-15 mt-15" style="border-left: 3px solid #38bdf8;">
+						{{doc_s3_1_best_practices}}
+					</p> 
+
+					<h3 id="dc-3.2">{{doc_s3_2_title}}</h3>
+					<p>{{doc_s3_2_text}}</p>
+					<div class="badge-demo">{{doc_s3_2_badge_demo}}</div>
+
+					<h3 id="dc-3.3">{{doc_s3_3_title}}</h3>
+					<p>{{doc_s3_3_intro}}</p>
+					<p>{{doc_s3_3_meta_generator}}</p>
+					
+
+					<h4 id="dc-3.3.1" class="mt-20 mb-20">{{doc_s3_3_1_title}}</h4>
+					<p>{{doc_s3_3_1_text}}</p>
+
+					<div class="info-box">
+						<p><strong>{{doc_s3_3_1_info_title}}</strong></p>
+						<ul class="ul-list">
+							<li>{{doc_s3_3_1_info_li1}}</li>
+							<li>{{doc_s3_3_1_info_li2}}</li>
+							<li>{{doc_s3_3_1_info_li3}}</li>
+						</ul>
+					</div>
+
+					<h4 class="mt-30 mb-20">{{doc_s3_3_table_origins_title}}</h4>
+					<div class="label-table-wrapper">
+						<table class="label-table">
+							<thead>
+								<tr>
+									<th>{{doc_s3_3_table_th_label}}</th>
+									<th><code>{{doc_s3_3_table_th_content}}</code></th>
+									<th><code>{{doc_s3_3_table_th_form}}</code></th>
+									<th><code>{{doc_s3_3_table_th_airole}}</code></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>{{doc_s3_3_table_huc}}</strong></td>
+									<td><code>{{doc_s3_3_table_huc_content}}</code></td>
+									<td><code>{{doc_s3_3_table_huc_form}}</code></td>
+									<td><code>{{doc_s3_3_table_huc_airole}}</code></td>
+								</tr>
+								<tr>
+									<td><strong>{{doc_s3_3_table_hca}}</strong></td>
+									<td><code>{{doc_s3_3_table_hca_content}}</code></td>
+									<td><code>{{doc_s3_3_table_hca_form}}</code></td>
+									<td><code>{{doc_s3_3_table_hca_airole}}</code></td>
+								</tr>
+								<tr>
+									<td><strong>{{doc_s3_3_table_hce}}</strong></td>
+									<td><code>{{doc_s3_3_table_hce_content}}</code></td>
+									<td><code>{{doc_s3_3_table_hce_form}}</code></td>
+									<td><code>{{doc_s3_3_table_hce_airole}}</code></td>
+								</tr>
+								<tr>
+									<td><strong>{{doc_s3_3_table_ace}}</strong></td>
+									<td><code>{{doc_s3_3_table_ace_content}}</code></td>
+									<td><code>{{doc_s3_3_table_ace_form}}</code></td>
+									<td><code>{{doc_s3_3_table_ace_airole}}</code></td>
+								</tr>
+								<tr>
+									<td><strong>{{doc_s3_3_table_aic}}</strong></td>
+									<td><code>{{doc_s3_3_table_aic_content}}</code></td>
+									<td><code>{{doc_s3_3_table_aic_form}}</code></td>
+									<td><code>{{doc_s3_3_table_aic_airole}}</code></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h4 class="mt-30 mb-20">{{doc_s3_3_content_keys_title}}</h4>
+					<div class="label-table-wrapper">
+						<table class="label-table">
+							<thead>
+								<tr>
+									<th>{{doc_s3_3_content_keys_th_key}}</th>
+									<th>{{doc_s3_3_content_keys_th_usage}}</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td><code>{{doc_s3_3_ck_editorial}}</code></td><td>{{doc_s3_3_ck_editorial_usage}}</td></tr>
+								<tr><td><code>{{doc_s3_3_ck_visual}}</code></td><td>{{doc_s3_3_ck_visual_usage}}</td></tr>
+								<tr><td><code>{{doc_s3_3_ck_code}}</code></td><td>{{doc_s3_3_ck_code_usage}}</td></tr>
+								<tr><td><code>{{doc_s3_3_ck_audio}}</code></td><td>{{doc_s3_3_ck_audio_usage}}</td></tr>
+								<tr><td><code>{{doc_s3_3_ck_video}}</code></td><td>{{doc_s3_3_ck_video_usage}}</td></tr>
+								<tr><td><code>{{doc_s3_3_ck_data}}</code></td><td>{{doc_s3_3_ck_data_usage}}</td></tr>
+								<tr><td><code>{{doc_s3_3_ck_transcription}}</code></td><td>{{doc_s3_3_ck_transcription_usage}}</td></tr>
+								<tr><td><code>{{doc_s3_3_ck_translation}}</code></td><td>{{doc_s3_3_ck_translation_usage}}</td></tr>
+								<tr><td><code>{{doc_s3_3_ck_synthesis}}</code></td><td>{{doc_s3_3_ck_synthesis_usage}}</td></tr>
+							</tbody>
+						</table>
+					</div>
+					<h4 class="mt-30 mb-20">{{doc_s3_3_examples_title}}</h4>
+
+					<h5 class="mb-10">{{doc_s3_3_example_visual_title}}</h5>
+					<div class="code-block">
+						<pre><code class="language-markup">{{doc_s3_3_example_visual_code}}</code></pre>
+					</div>
+
+					<h5 class="mt-20 mb-10">{{doc_s3_3_example_composite_title}}</h5>
+					<div class="code-block">
+						<pre><code class="language-markup">{{doc_s3_3_example_composite_code}}</code></pre>
+					</div>
+
+					<h4 id="dc-3.3.2" class="mt-20 mb-20">{{doc_s3_3_2_title}}</h4>
+					<p>{{doc_s3_3_2_text}}</p>
+					<ul class="ul-list">
+						<li>{{doc_s3_3_2_li1}}</li>
+						<li>{{doc_s3_3_2_li2}}</li>
+						<li>{{doc_s3_3_2_li3}}</li>
+					</ul>
+
+					<p class="text-italic opacity-80 pl-15 mt-15" style="border-left: 3px solid #38bdf8;">
+						{{doc_s3_3_2_advice}}
+					</p>
+
+				</div>
+			</section>
+			
+			<section id="dc-4" class="doc-section">
+				<h2>{{doc_s4_heading}}</h2>
+				<div class="content-section">
+					<div class="intro-content">
+						<h3 id="dc-4.1">{{doc_s4_1_title}}</h3>
+						<p>{{doc_s4_1_intro1}}</p>
+						
+						<p class="text-italic opacity-80 pl-15 mt-15" style="border-left: 3px solid #38bdf8;">
+							{{doc_s4_1_rappel}}
+						</p>
+
+						<h3  id="dc-4.2" class="mt-40">{{doc_s4_2_title}}</h3>
+
+						<div class="mb-30">
+							<h4 id="dc-4.2.1">{{doc_s4_2_1_title}}</h4>
+							<ul class="ul-list">
+								<li>{{doc_s4_2_1_li1}}</li>
+								<li>{{doc_s4_2_1_li2}}</li>
+								<li>{{doc_s4_2_1_li3}}</li>
+								<li>{{doc_s4_2_1_li4}}</li>
+								<li>{{doc_s4_2_1_li5}}</li>
+							</ul>
+						</div>
+
+						<div class="mb-30">
+							<h4 id="dc-4.2.2">{{doc_s4_2_2_title}}</h4>
+							<ul class="ul-list">
+								<li>{{doc_s4_2_2_li1}}</li>
+								<li>{{doc_s4_2_2_li2}}</li>
+								<li>{{doc_s4_2_2_li3}}</li>
+								<li>{{doc_s4_2_2_li4}}</li>
+								<li>{{doc_s4_2_2_li5}}</li>
+							</ul>
+						</div>
+
+						<div class="mb-30">
+							<h4 id="dc-4.2.3">{{doc_s4_2_3_title}}</h4>
+							<ul class="ul-list">
+								<li>{{doc_s4_2_3_li1}}</li>
+								<li>{{doc_s4_2_3_li2}}</li>
+								<li>{{doc_s4_2_3_li3}}</li>
+								<li>{{doc_s4_2_3_li4}}</li>
+								<li>{{doc_s4_2_3_li5}}</li>
+							</ul>
+						</div>
+
+						<div class="mb-30">
+							<h4 id="dc-4.2.4">{{doc_s4_2_4_title}}</h4>
+							<ul class="ul-list">
+								<li>{{doc_s4_2_4_li1}}</li>
+								<li>{{doc_s4_2_4_li2}}</li>
+								<li>{{doc_s4_2_4_li3}}</li>
+								<li>{{doc_s4_2_4_li4}}</li>
+								<li>{{doc_s4_2_4_li5}}</li>
+							</ul>
+						</div>
+
+						<div class="mb-30">
+							<h4 id="dc-4.2.5">{{doc_s4_2_5_title}}</h4>
+							<ul class="ul-list">
+								<li>{{doc_s4_2_5_li1}}</li>
+								<li>{{doc_s4_2_5_li2}}</li>
+								<li>{{doc_s4_2_5_li3}}</li>
+								<li>{{doc_s4_2_5_li4}}</li>
+								<li>{{doc_s4_2_5_li5}}</li>
+							</ul>
+						</div>
+
+						<div class="mb-30">
+							<h4 id="dc-4.2.6">{{doc_s4_2_6_title}}</h4>
+							<ul class="ul-list">
+								<li>{{doc_s4_2_6_li1}}</li>
+								<li>{{doc_s4_2_6_li2}}</li>
+								<li>{{doc_s4_2_6_li3}}</li>
+							</ul>
+							<p class="text-italic opacity-80 pl-15 mt-15" style="border-left: 3px solid #38bdf8;">
+								{{doc_s4_2_6_vigilance}}
+							</p>
+							
+							<p class="text-italic opacity-80 pl-15 mt-15" style="border-left: 3px solid #38bdf8;">
+								{{doc_s4_2_6_sincerity}}
+							</p>							
+							
+							
+						</div>
+
+						<div class="mb-30">
+							<h4 id="dc-4.2.7">{{doc_s4_2_7_title}}</h4>
+							<ul class="ul-list">
+								<li>{{doc_s4_2_7_li1}}</li>
+								<li>{{doc_s4_2_7_li2}}</li>
+								<li>{{doc_s4_2_7_li3}}</li>
+								<li>{{doc_s4_2_7_li4}}</li>
+								<li>{{doc_s4_2_7_li5}}</li>
+							</ul>
+						</div>
+
+						<div class="mb-30">
+							<h4 id="dc-4.2.8">{{doc_s4_2_8_title}}</h4>
+							<ul class="ul-list">
+								<li>{{doc_s4_2_8_li1}}</li>
+								<li>{{doc_s4_2_8_li2}}</li>
+								<li>{{doc_s4_2_8_li3}}</li>
+							</ul>
+						</div>
+						
+						<div class="mb-30">
+							<h4 id="dc-4.2.9">{{doc_s4_2_9_title}}</h4>
+							<ul class="ul-list">
+								<li>{{doc_s4_2_9_li1}}</li>
+								<li>{{doc_s4_2_9_li2}}</li>
+								<li>{{doc_s4_2_9_li3}}</li>
+								<li>{{doc_s4_2_9_li4}}</li>
+							</ul>
+						</div>
+
+						<div class="mb-30">
+							<h4 id="dc-4.2.10">{{doc_s4_2_10_title}}</h4>
+							<ul class="ul-list">
+								<li>{{doc_s4_2_10_li1}}</li>
+								<li>{{doc_s4_2_10_li2}}</li>
+								<li>{{doc_s4_2_10_li3}}</li>
+								<li>{{doc_s4_2_10_li4}}</li>
+							</ul>
+						</div>						
+
+						<h3  id="dc-4.3" class="mt-40">{{doc_s4_3_title}}</h3>
+						<ul class="ul-list">
+							<li>{{doc_s4_3_li1}}</li>
+							<li>{{doc_s4_3_li2}}</li>
+							<li>{{doc_s4_3_li3}}</li>
+							<li>{{doc_s4_3_li4}}</li>
+						</ul>
+
+						<h3  id="dc-4.4" class="mt-40">{{doc_s4_4_title}}</h3>
+						<p>{{doc_s4_4_intro}}</p>
+						
+						<table class="label-table mt-20 mb-20">
+							<thead>
+								<tr>
+									<th>{{doc_s4_4_table_th1}}</th>
+									<th>{{doc_s4_4_table_th2}}</th>
+									<th>{{doc_s4_4_table_th3}}</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>{{doc_s4_4_ace_l}}</strong></td>
+									<td><em>{{doc_s4_4_ace_l_name}}</em></td>
+									<td>{{doc_s4_4_ace_l_desc}}</td>
+								</tr>
+								<tr>
+									<td><strong>{{doc_s4_4_ace_b}}</strong></td>
+									<td><em>{{doc_s4_4_ace_b_name}}</em></td>
+									<td>{{doc_s4_4_ace_b_desc}}</td>
+								</tr>
+								<tr>
+									<td><strong>{{doc_s4_4_ace_d}}</strong></td>
+									<td><em>{{doc_s4_4_ace_d_name}}</em></td>
+									<td>{{doc_s4_4_ace_d_desc}}</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="mt-15">{{doc_s4_4_impl}}</p>
+
+						<h3 id="dc-4.5" class="mt-40">{{doc_s4_5_title}}</h3>
+						<ul class="ul-list">
+							<li>{{doc_s4_5_li1}}</li>
+							<li>{{doc_s4_5_li2}}</li>
+							<li>{{doc_s4_5_li3}}</li>
+						</ul>
+
+						<p class="text-italic opacity-80 mt-40" style="text-align: center; border-top: 1px solid #334155; padding-top: 20px;">
+							{{doc_s4_5_closing}}
+						</p>
+					</div>
+				</div>
+        </section>        
+		</div> 
+    </div> 
+    </main>
+
+    <div id="footer-target"></div>
+
+    <script src="../../../js/main.js" defer></script>
+    
+    <button id="backToTop" class="back-to-top" aria-label="{{back_to_top_aria_label}}">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+    
+	<button id="flyout-toggle" class="flyout-btn" aria-label="{{flyout_toggle_aria_label}}">
+		<i class="fa-solid fa-list-ul"></i>
+	</button>
+
+	<div id="flyout-menu" class="flyout-panel">
+		<div class="flyout-header">
+			<h3>{{flyout_title}}</h3>
+			<button id="flyout-close" class="close-btn">{{flyout_close_text}}</button>
+		</div>
+		<div class="flyout-content">
+            <div id="toc">
+                <ul>
+                    <li><a href="#dc-intro" class="toc-link">{{toc_intro}}</a></li>
+                    <li><a href="#dc-1" class="toc-link">{{toc_s1}}</a></li>
+                    <li><a href="#dc-2" class="toc-link">{{toc_s2}}</a></li>
+                    <li>
+                        <a href="#dc-3" class="toc-link">{{toc_s3}}</a>
+						<ul class="sub-toc">
+							<li><a href="#dc-3.1" class="toc-link">{{toc_s3_1}}</a></li>
+							<li><a href="#dc-3.2" class="toc-link">{{toc_s3_2}}</a></li>
+							<li><a href="#dc-3.3" class="toc-link">{{toc_s3_3}}</a>
+								<ul class="sub-sub-toc">
+									<li><a href="#dc-3.3.1" class="toc-link">{{toc_s3_3_1}}</a></li>
+									<li><a href="#dc-3.3.2" class="toc-link">{{toc_s3_3_2}}</a></li>
+								</ul>							
+							</li>
+						</ul>
+                    </li>
+                    <li>
+                        <a href="#dc-4" class="toc-link">{{toc_s4}}</a>
+                        <ul class="sub-toc">
+                            <li><a href="#dc-4.1" class="toc-link">{{toc_s4_1}}</a></li>
+                            <li><a href="#dc-4.2" class="toc-link">{{toc_s4_2}}</a>
+								<ul class="sub-sub-toc">
+									<li><a href="#dc-4.2.1" class="toc-link">{{toc_s4_2_1}}</a></li>
+									<li><a href="#dc-4.2.2" class="toc-link">{{toc_s4_2_2}}</a></li>
+									<li><a href="#dc-4.2.3" class="toc-link">{{toc_s4_2_3}}</a></li>
+									<li><a href="#dc-4.2.4" class="toc-link">{{toc_s4_2_4}}</a></li>
+									<li><a href="#dc-4.2.5" class="toc-link">{{toc_s4_2_5}}</a></li>
+									<li><a href="#dc-4.2.6" class="toc-link">{{toc_s4_2_6}}</a></li>
+									<li><a href="#dc-4.2.7" class="toc-link">{{toc_s4_2_7}}</a></li>
+									<li><a href="#dc-4.2.8" class="toc-link">{{toc_s4_2_8}}</a></li>
+									<li><a href="#dc-4.2.9" class="toc-link">{{toc_s4_2_9}}</a></li>
+									<li><a href="#dc-4.2.10" class="toc-link">{{toc_s4_2_10}}</a></li>
+								</ul>	                            
+                            </li>
+                            <li><a href="#dc-4.3" class="toc-link">{{toc_s4_3}}</a></li>
+							<li><a href="#dc-4.4" class="toc-link">{{toc_s4_4}}</a></li>
+							<li><a href="#dc-4.5" class="toc-link">{{toc_s4_5}}</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+		</div>
+	</div>
+
+	<div id="flyout-overlay" class="flyout-overlay"></div>
+    
+</body>
+</html>
