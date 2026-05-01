@@ -68,7 +68,6 @@ Certains textes contiennent des balises (ex: `<strong>`, `<a>`, `<i>`, `<br>`).
 ---
 
 ## 🔄 Workflow de contribution
-============================
 ```text
     VOTRE POSTE            DÉPÔT GITHUB             ADMINISTRATION
     (Local)                (En ligne)               (Local / Site)
@@ -96,10 +95,10 @@ Certains textes contiennent des balises (ex: `<strong>`, `<a>`, `<i>`, `<br>`).
 ```
 ### Détails des étapes :
 1. **Fork** : Vous créez votre propre copie du projet sur votre compte GitHub.
-2. **Edit** : Vous travaillez sur vos fichiers JSON (ex: `about_en.json`) dans votre copie[cite: 3].
+2. **Edit** : Vous travaillez sur vos fichiers JSON (ex: `about_en.json`) dans votre copie
 3. **Push** : Vous envoyez vos modifications vers votre dépôt en ligne.
 4. **Pull Request** : Vous demandez l'intégration de votre travail au projet officiel.
-5. **Review** : La team TCP/UP vérifie la cohérence éditoriale et la fidélité au sens original[cite: 4].
+5. **Review** : La team TCP/UP vérifie la cohérence éditoriale et la fidélité au sens original
 6. **Merge** : Votre contribution est officiellement acceptée et fusionnée.
 7. **Build & Deploy** : L'administrateur génère les pages HTML finales et met à jour le site.
 
