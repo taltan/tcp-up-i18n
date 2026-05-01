@@ -68,14 +68,6 @@ Certains textes contiennent des balises (ex: `<strong>`, `<a>`, `<i>`, `<br>`).
 ---
 
 ## 🔄 Workflow de contribution
-
-Pour une collaboration fluide, voici le cycle d'une contribution :
-1. **Fork & Branch** : Créez une copie du dépôt et une branche dédiée (ex: `trad-about-en`).
-2. **Edit** : Modifiez ou ajoutez vos fichiers JSON dans `locales/en/`.
-3. **Pull Request** : Soumettez votre proposition sur GitHub.
-4. **Review** : La team TCP/UP relit pour assurer la fidélité au sens et la cohérence technique.
-5. **Merge & Build** : Une fois validée, votre traduction est fusionnée et générée localement pour le site.
-
 ============================
 ```text
     VOTRE POSTE            DÉPÔT GITHUB             ADMINISTRATION
@@ -102,6 +94,15 @@ Pour une collaboration fluide, voici le cycle d'une contribution :
        |                       |------------------------->|
        |                       |                          |
 ```
+### Détails des étapes :
+1. **Fork** : Vous créez votre propre copie du projet sur votre compte GitHub.
+2. **Edit** : Vous travaillez sur vos fichiers JSON (ex: `about_en.json`) dans votre copie[cite: 3].
+3. **Push** : Vous envoyez vos modifications vers votre dépôt en ligne.
+4. **Pull Request** : Vous demandez l'intégration de votre travail au projet officiel.
+5. **Review** : La team TCP/UP vérifie la cohérence éditoriale et la fidélité au sens original[cite: 4].
+6. **Merge** : Votre contribution est officiellement acceptée et fusionnée.
+7. **Build & Deploy** : L'administrateur génère les pages HTML finales et met à jour le site.
+
 ---
 
 ## 🏗 Processus de Build (Génération des pages)
