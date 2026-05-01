@@ -67,6 +67,43 @@ Certains textes contiennent des balises (ex: `<strong>`, `<a>`, `<i>`, `<br>`).
 
 ---
 
+## 🔄 Workflow de contribution
+
+Pour une collaboration fluide, voici le cycle d'une contribution :
+1. **Fork & Branch** : Créez une copie du dépôt et une branche dédiée (ex: `trad-about-en`).
+2. **Edit** : Modifiez ou ajoutez vos fichiers JSON dans `locales/en/`.
+3. **Pull Request** : Soumettez votre proposition sur GitHub.
+4. **Review** : La team TCP/UP relit pour assurer la fidélité au sens et la cohérence technique.
+5. **Merge & Build** : Une fois validée, votre traduction est fusionnée et générée localement pour le site.
+
+============================
+```text
+    VOTRE POSTE            DÉPÔT GITHUB             ADMINISTRATION
+    (Local)                (En ligne)               (Local / Site)
+       |                       |                          |
+       |      1. FORK          |                          |
+       |---------------------->|                          |
+       |                       |                          |
+       |      2. EDIT          |                          |
+       |   (JSON Files)        |                          |
+       |<----------------------|                          |
+       |                       |                          |
+       |      3. PUSH          |                          |
+       |---------------------->|                          |
+       |                       |                          |
+       |   4. PULL REQUEST     |      5. REVIEW           |
+       |   (Proposition)       |   (Team TCP/UP)          |
+       |---------------------->|------------+             |
+       |                       |            |             |
+       |                       |      6. MERGE / VALIDÉ   |
+       |                       |<-----------+             |
+       |                       |                          |
+       |                       |      7. BUILD & DEPLOY   |
+       |                       |------------------------->|
+       |                       |                          |
+```
+---
+
 ## 🏗 Processus de Build (Génération des pages)
 
 **Note importante :** La fusion des textes et du HTML ne se fait pas via GitHub. 
