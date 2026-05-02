@@ -4,6 +4,11 @@ Bienvenue sur le dépôt dédié à l'internationalisation (i18n) du projet **TC
 
 L'objectif de ce dépôt est de permettre à la communauté de contribuer à l'expansion multilingue du site. **Pour l'heure, nous concentrons nos efforts sur la version anglaise**, mais la structure est prête à accueillir d'autres langues par la suite. Nous utilisons un système de **génération statique** où le contenu textuel (JSON) est totalement dissocié de la structure (HTML).
 
+## 🔗 Écosystème du projet
+Ce dépôt est dédié uniquement à la **traduction**. 
+* **Source de vérité** : Pour toute question sur le sens profond des labels ou de la charte, référez-vous au dépôt de doctrine : [taltan/tcp-up](https://github.com/taltan/tcp-up).
+* **Communication** : Pour discuter de la terminologie, rejoignez-nous sur [Discord](https://discord.gg/PDzVrVA3x).
+
 ## 📂 Architecture du dépôt
 
 Le projet est organisé pour séparer le contenu traduisible de la structure technique :
