@@ -25,43 +25,44 @@
         <a href="javascript:history.back()" class="back-link">{{back_link_text}}</a>
 
         <div class="doc-header">
-            <h1 id="top">{{heading_community}}</h1>
+            <h1 id="top">{{heading_main}}</h1>
             <p class="subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
-                {{subtitle_community}}
+                {{subtitle_main}}
             </p>
         </div>
 
         <!-- Participer -->
         <section id="participer" class="doc-section">
             <h2 class="section-header">
-                <span>{{participer_heading}}</span>
+                <span>{{section_participer_heading}}</span>
                 
             </h2>
             <div class="content-section">
                 <div class="grid-2">
-				<div class="card-info">
-					<h3>{{participer_contribuer_heading}}</h3>
-					<p class="mb-30">{{participer_contribuer_text}}</p>
-					<p class="text-center"><a href="https://github.com/taltan/tcp-up" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">{{participer_contribuer_github_link_text}}</a></p>
-				</div>
-				<div class="card-info">
-					<h3>{{participer_rejoindre_heading}}</h3>
-					<p class="mb-30">{{participer_rejoindre_text}}</p>
-					<div class="flex-center gap-20">
-						<a href="https://www.linkedin.com/company/tcp-up" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-							{{participer_rejoindre_linkedin_text}}
-						</a>					
-						<a href="https://bsky.app/profile/tcp-up.org" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-							{{participer_rejoindre_bluesky_text}}
-						</a>
 
+				<div class="card-info">
+					<h3>{{card_contrib_title}}</h3>
+					<p class="mb-30">{{card_contrib_text}}</p>
+					<div class="flex-center gap-20">
+						<a href="https://github.com/taltan/tcp-up" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">{{card_contrib_btn1}}</a>
+						<a href="https://github.com/taltan/tcp-up-i18n" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">{{card_contrib_btn2}}</a>
+					</div>
+				</div>	
+
+				<div class="card-info">
+					<h3>{{card_discuss_title}}</h3>
+					<p class="mb-30">{{card_discuss_text}}</p>
+					<div class="flex-center gap-20">
+						<a href="https://discord.gg/wfqHwB7kGC" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
+						<a href="https://www.linkedin.com/company/tcp-up" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>                    
+						<a href="https://bsky.app/profile/tcp-up.org" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bluesky"></i></a>
 					</div>
 				</div>
-                </div>
+								</div>
                 <div class="card-info mt-30">
-                    <h3>{{participer_casdetude_heading}}</h3>
-                    <p class="mb-30">{{participer_casdetude_text}}</p>
-                    <p class="text-center"><a href="/pages/contact.html" class="btn btn-secondary" style="margin-top: 1rem;">{{participer_casdetude_link_text}}</a></p>
+                    <h3>{{card_casdetude_title}}</h3>
+                    <p class="mb-30">{{card_casdetude_text}}</p>
+                    <p class="text-center"><a href="/pages/contact.html" class="btn btn-secondary" style="margin-top: 1rem;">{{card_casdetude_button}}</a></p>
                 </div>
             </div>
         </section>
@@ -82,9 +83,9 @@
 						<img src="../../../img/icon_tcp-up-header_s.webp" alt="{{adopter_logo_alt}}" class="adopter-logo">
 					</a>
 					<div class="adopter-info">
-						<h4>{{adopter_tcpup_name}}</h4>
-						<p class="adopter-url">{{adopter_tcpup_url_text}}</p>
-						<p>{{adopter_tcpup_description}}</p>
+						<h4>{{adopter_name}}</h4>
+						<p class="adopter-url">{{adopter_url}}</p>
+						<p>{{adopter_description}}</p>
 						<div class="adopter-badges">
 							<span class="badge-tr-co hce">{{badge_hce}}</span>
 							<span class="badge-tr-co ace">{{badge_ace}}</span>
@@ -107,9 +108,9 @@
                 
             </h2>
             <div class="content-section">
-                <p>{{comite_description}}</p>
+                <p>{{comite_text}}</p>
                 <div class="card-info" style="text-align: center; padding: 2rem;">
-                    <p><a href="/pages/contact.html" class="btn btn-secondary">{{comite_link_text}}</a></p>
+                    <p><a href="/pages/contact.html" class="btn btn-secondary">{{comite_button}}</a></p>
                 </div>
             </div>
         </section>
@@ -121,7 +122,7 @@
                 
             </h2>
             <div class="content-section">
-                <p>{{roadmap_description}}</p>
+                <p>{{roadmap_text}}</p>
                 <div class="card-info" style="text-align: center; padding: 2rem;">
                     <p style="opacity: 0.7; font-style: italic;">{{roadmap_status}}</p>
                 </div>
