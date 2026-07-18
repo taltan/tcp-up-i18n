@@ -1,0 +1,20 @@
+{
+  "lang_code": "en",
+  "footer_cc_alt": "CC",
+  "footer_by_alt": "BY",
+  "footer_sa_alt": "SA",
+  "footer_license_text": "The TCP/UP charter and graphic resources are licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\" target=\"_blank\" rel=\"license noopener noreferrer\" style=\"color: inherit; text-decoration: underline;\">CC BY-SA 4.0 International</a>.<br><span class=\"opacity-70\">Free sharing and adaptation provided credit is given and distributed identically.</span>",
+  "footer_link_privacy": "<i class=\"fa-solid fa-shield-halved mr-0-5e\"></i> Privacy",
+  "footer_link_about": "<i class=\"fa-regular fa-user\"></i> About",
+  "footer_link_community": "<i class=\"fa-solid fa-users\"></i> Community",
+  "footer_link_blog": "<i class=\"fa-solid fa-blog\"></i> The blog",
+  "footer_link_github": "<i class=\"fa-brands fa-github mr-0-5e\"></i> GitHub",
+  "footer_link_linkedin": "<i class=\"fa-brands fa-linkedin mr-0-5e\"></i> LinkedIn",
+  "footer_link_bluesky": "<i class=\"fa-brands fa-bluesky mr-0-5e\"></i> Bluesky",
+  "footer_separator": "·",
+  "footer_signature_content_label": "Editorial content",
+  "footer_signature_webdev_label": "Web development",
+  "footer_badge_hce": "[TCP/UP: HCE]",
+  "footer_badge_ace": "[TCP/UP: ACE]",
+  "footer_copyright": "© 2026 | <span style=\"color: var(--white)\"><strong>TCP</strong></span><span class=\"text-accent\">/UP</span> | T@ltan"
+}

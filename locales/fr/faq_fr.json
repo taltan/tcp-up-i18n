@@ -17,7 +17,7 @@
   "q_nontextuel_title": "Puis-je utiliser TCP/UP pour du contenu autre que textuel (audio, vidéo) ?",
   "q_nontextuel_answer": "Oui. Le protocole a été pensé pour tout type de contenu numérique, texte, image, audio, vidéo, code. La distinction entre Fond (intention, structure) et Forme (exécution technique) s’applique quel que soit le média. Pour des œuvres complexes, privilégiez un étiquetage modulaire ou le label le plus représentatif.",
   "q_professionnels_title": "TCP/UP est-il réservé aux professionnels ?",
-  "q_professionnels_answer": "Non, il est conçu pour tous, du blogueur amateur à la grande entreprise. La simplicité de l’arbre de décision (3 secondes) et la gratuité des ressources le rendent accessible à tous les créateurs de contenu.",
+  "q_professionnels_answer": "Non, il est conçu pour tous, du blogueur amateur à la grande entreprise. La simplicité de l’arbre de décision (30 secondes) et la gratuité des ressources le rendent accessible à tous les créateurs de contenu.",
   "cat_pratique_title": "<i class=\"fa-solid fa-pen-ruler\"></i> Application Pratique : Choisir le bon Label",
   "q_correction_title": "J’ai utilisé l’IA pour corriger l’orthographe ou la syntaxe. Quel label appliquer ?",
   "q_correction_answer": "Si l’IA n’est intervenue d’aucune manière, le label <strong>HUC</strong> (aucune IA utilisée) s’applique. Si elle a uniquement corrigé l’orthographe ou la grammaire sans modifier le fond ni le style, le label <strong>HCA</strong> (Human‑Centric Assistance) est le plus adapté. En cas de reformulation plus substantielle (amélioration de la fluidité, changement de ton), passez à <strong>HCE</strong> (Human‑Centric Editing).",

@@ -1,0 +1,23 @@
+{
+  "lang_code": "en",
+  "aria_label_logo": "TCP/UP Home",
+  "logo_alt": "",
+  "aria_label_open_menu": "Open menu",
+  "nav_project": "The Project<small>▼</small>",
+  "nav_why": "Why?",
+  "nav_forwho": "For whom?",
+  "nav_charter": "The Charter<small>▼</small>",
+  "nav_what": "What is it?",
+  "nav_pillars": "The 4 pillars",
+  "nav_labels": "The 5 labels",
+  "nav_ethics": "Ethics",
+  "nav_usage": "Usage<small>▼</small>",
+  "nav_tagging_guide": "Tagging guide",
+  "nav_wizard": "Choice wizard",
+  "nav_resources": "Resources",
+  "nav_faq": "FAQ",
+  "nav_community": "Community",
+  "nav_blog": "The blog",
+  "nav_about": "About",
+  "nav_contact_title": "Contact us"
+}

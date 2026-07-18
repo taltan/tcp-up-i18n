@@ -1,0 +1,11 @@
+{
+  "lang_code": "en",
+  "page_title": "Choice wizard - TCP/UP",
+  "back_link_text": "← Back to previous page",
+  "main_heading": "Find your label in 30 seconds",
+  "main_subtitle": "Answer a few simple questions to identify the TCP/UP label that matches your creation process",
+  "result_download_label": "<i class=\"fa-solid fa-download\"></i> Download this badge",
+  "result_detail_label": "Learn more about this label",
+  "result_restart_label": "<i class=\"fa-solid fa-rotate-left\"></i> Start over",
+  "back_to_top_aria_label": "Back to top"
+}
